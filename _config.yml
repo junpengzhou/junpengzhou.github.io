@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Junpengzhou's Blog
+subtitle: 'useful, interesting, and beautiful'
+description: 'Junpengzhou的博客，记录生活，记录学习，记录成长'
 keywords:
-author: John Doe
-language: en
-timezone: ''
+author: Junpengzhou
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://junpengzhou.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,4 +102,11 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  - type: ''
+    repo:
+      github:
+          url: https://github.com/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
+          branch: gh-pages # GitHub Pages的分支
+          token: '修改成我发布的accessToken'
+    name: 'junpengzhou'
+    email: 'jeepzhou11@163.com'
