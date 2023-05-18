@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Junpengzhou's Blog
+title: 'Junpengzhou's Blog'
 subtitle: 'useful, interesting, and beautiful'
 description: 'Junpengzhou的博客，记录生活，记录学习，记录成长'
-keywords:
-author: Junpengzhou
-language: zh-CN
+keywords: '技术,前端,后端,美食,工程管理,数学,英语,密码学,Java,Python,机器学习,AI,读书,播客,工具'
+author: 'Junpengzhou'
+language: 'zh-CN'
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://junpengzhou.github.io
-permalink: :year/:month/:day/:title/
+url: 'https://junpengzhou.github.io'
+permalink: ':year/:month/:day/:title/'
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -102,7 +102,7 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: ''
+  - type: 'git'
     repo:
       github:
           url: https://github.com/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
@@ -110,3 +110,25 @@ deploy:
           token: '修改成我发布的accessToken'
     name: 'junpengzhou'
     email: 'jeepzhou11@163.com'
+
+# Plugins
+# https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: left
+    width: 150
+    height: 300
+  mobile:
+    show: true
+    scale: 0.5
+  react:
+    opacity: 1.0
