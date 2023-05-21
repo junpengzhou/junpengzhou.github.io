@@ -136,3 +136,9 @@ live2d:
     scale: 0.5
   react:
     opacity: 1.0
+nofollow:
+  enable: true
+  field: site
+  exclude:
+    - 'junpengzhou.xyz'
+    - 'junpengzhou.cn'
