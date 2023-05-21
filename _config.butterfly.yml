@@ -901,12 +901,12 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/support/css/custom.css?v1">
-    - <link rel="stylesheet" href="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.9/tianli_gpt.css">
+    - <link rel="stylesheet" href="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.8/tianli_gpt.css">
   bottom:
     - <script src="/support/js/custom.js?v1"></script>
     - <script src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/js/jquery.min.js"></script>
     - <script>let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'tzX4pm6AJImcMiUYphuB';</script>
-    - <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.9/tianli_gpt.js"></script>
+    - <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.8/tianli_gpt.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
