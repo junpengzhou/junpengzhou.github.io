@@ -1098,12 +1098,11 @@ nav_music:
   server: tencent
   type: playlist
   order: list
-  # all_playlist: https://y.qq.com/n/ryqq/playlist/8978256571
 
 # 评论匿名邮箱
 visitorMail:
-  enable: true
-  mail: visitor@anheyu.com
+  enable: false
+  mail: visitor@163.com
 
 # ptool 文章底部工具
 ptool:
