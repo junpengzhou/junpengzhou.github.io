@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "update": "git pull && git submodule update --remote",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
