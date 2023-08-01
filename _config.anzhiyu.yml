@@ -185,7 +185,7 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    # - /img/default_cover.jpg
+    - https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%BF%AB%E4%BA%86%E6%96%B0%E9%97%BB%E6%92%AD%E6%8A%A5.webp
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
