@@ -1146,7 +1146,7 @@ greetingBox:
 
 # 文章顶部ai摘要
 post_head_ai_description:
-  enable: true
+  enable: false
   gptName: AnZhiYu
   mode: local # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
@@ -1168,7 +1168,7 @@ accesskey:
 
 # 友情链接顶部相关配置
 linkPageTop: 
-  enable: false
+  enable: true
   title: 与数百名博主无限进步
 
 # 缩略图后缀 archive/tag/category 页面单独开启后缀
