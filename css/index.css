@@ -6107,6 +6107,7 @@ body[data-type="link"] #page .page-title {
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item >.recent-post-info > .article-title {
+    -webkit-line-clamp: 1 !important;
     top: 20px;
   }
 }
@@ -6140,25 +6141,18 @@ body[data-type="link"] #page .page-title {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  bottom: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: inline-block;
+  bottom: 15px;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .sticky-warp {
   position: absolute;
   top: -90px;
   left: 32px;
   line-height: 12px;
-}
-#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .article-meta {
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .post-meta-date {
   color: var(--anzhiyu-fontcolor);
@@ -6181,10 +6175,6 @@ body[data-type="link"] #page .page-title {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
 }
 @media screen and (max-width: 500px) {
   #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .post-meta-date {
@@ -6273,26 +6263,6 @@ body[data-type="link"] #page .page-title {
   }
   #home_top {
     padding: 0px 20px 0px;
-  }
-}
-div#bannerGroup {
-  margin-right: 10px;
-  width: calc(51% - 10px) !important;
-}
-@media screen and (max-width: 768px) {
-  #home_top {
-    padding: 0px 15px;
-  }
-  #topPostGroup {
-    height: 280px;
-  }
-  #swiper_container_blog {
-    padding: 0 10px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  div#bannerGroup {
-    display: none !important;
   }
 }
 #content-inner #recent-posts > .recent-post-item > .recent-post-info > .content {
