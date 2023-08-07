@@ -222,7 +222,7 @@ mainTone:
 # wordcount (字数统计)
 # see https://butterfly.js.org/posts/ceeb73f/#字数统计
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -1183,6 +1183,7 @@ inject:
   bottom:
     # 自定义js
     # - <script src="/js/xxx"></script>
+    - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=3FWN3ZXqo0a6Z2Ev&ck=3FWN3ZXqo0a6Z2Ev"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
