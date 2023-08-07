@@ -1018,22 +1018,22 @@ home_top:
   subTitle: 万物可爱
   siteText: junpengzhou.github.io
   category:
-    - name: 前端
-      path: /categories/前端开发/
+    - name: 技术分享
+      path: /categories/技术分享/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 大学
-      path: /categories/大学生涯/
+    - name: 学习分享
+      path: /categories/学习分享/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活日常/
+    - name: 日常分享
+      path: /categories/日常分享/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
-  default_descr: 再怎么看我也不知道怎么描述它的啦！
+  default_descr:
   swiper:
     enable: false
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
