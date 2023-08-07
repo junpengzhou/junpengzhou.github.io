@@ -47,8 +47,8 @@ code_word_wrap: false
 copy:
   enable: true
   copyright:
-    enable: false
-    limit_count: 50
+    enable: true
+    limit_count: 100
 
 # social settings (社交图标设置)
 # formal:
@@ -161,7 +161,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /support/img/avatar.png
+  img: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/avatar.png
   effect: false
 
 # Disable all banner image
@@ -248,7 +248,7 @@ toc:
   post: true
   page: false
   number: true
-  expand: false
+  expand: true
   style_simple: false # for post
   scroll_percent: true
 
@@ -629,7 +629,7 @@ theme_color:
 table_interlaced_discoloration: false
 
 # 首页双栏显示
-article_double_row: true
+article_double_row: false
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默认top_img全屏，site_info在中间)
@@ -771,7 +771,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: # 自定义头像
+  avatar: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/avatar.png
 
 # aside (侧边栏)
 # --------------------------------------
@@ -790,12 +790,12 @@ aside:
     enable: true
     description: # <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
     name_link: /
-  
   card_announcement:
     enable: false
     content: 欢迎来看我的博客鸭~
+  # 微信公众号
   card_weixin:
-    enable: true
+    enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
     backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
   card_recent_post:
