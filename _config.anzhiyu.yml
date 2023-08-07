@@ -30,7 +30,7 @@ nav:
       item:
         - name: 博客
           link: https://junpengzhou.github.io/
-          icon: /img/favicon.ico
+          icon: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/jp-blog-favicon.ico
 
 # Code Blocks (代码相关)
 # --------------------------------------
@@ -157,7 +157,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /favicon.ico
+favicon: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/jp-blog-favicon.ico
 
 # Avatar (头像)
 avatar:
