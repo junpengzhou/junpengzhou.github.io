@@ -65,14 +65,12 @@ author_status:
   fallback_src: https://github.githubassets.com/images/icons/emoji/unicode/270d.png
   text: on Studying
   skills:
+    - 🔨 全栈开发工程师
     - 🤖️ 数码科技爱好者
     - 🔍 分享与热心帮助
     - 🏠 智能家居小能手
-    - 🔨 设计开发一条龙
-    - 🤝 专修交互与设计
     - 🏃 脚踏实地行动派
     - 🧱 团队小组发动机
-    - 💢 壮汉人狠话不多
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系统
@@ -1017,8 +1015,8 @@ home_top:
   enable: true # 开关
   timemode: date #date/updated
   title: 生活明朗
-  subTitle: 万物可爱。
-  siteText: anheyu.com
+  subTitle: 万物可爱
+  siteText: junpengzhou.github.io
   category:
     - name: 前端
       path: /categories/前端开发/
@@ -1037,7 +1035,7 @@ home_top:
       icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
-    enable: false
+    enable: true
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
@@ -1067,15 +1065,15 @@ console:
 
 # 51a统计配置
 LA:
-  enable: false
-  ck:
-  LingQueMonitorID:
+  enable: true
+  ck: 3FWN3ZXqo0a6Z2Ev
+  LingQueMonitorID: 3FWN3ZXqo0a6Z2Ev
 
 # 标签卖萌
 diytitle:
-  enable: true
+  enable: false
   leaveTitle: w(ﾟДﾟ)w 怎么走啦不看啦嘛！？
-  backTitle: ♪(^∇^*)嘻嘻回来啦
+  backTitle: ♪(^∇^*) 嘻嘻回来啦
 
 # 留言弹幕配置
 comment_barrage_config:
