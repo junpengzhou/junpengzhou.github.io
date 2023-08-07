@@ -222,10 +222,10 @@ mainTone:
 # wordcount (字数统计)
 # see https://butterfly.js.org/posts/ceeb73f/#字数统计
 wordcount:
-  enable: true
+  enable: false
   post_wordcount: true
   min2read: true
-  total_wordcount: false
+  total_wordcount: true
 
 # Display the article introduction on homepage
 # 1: description
@@ -268,12 +268,12 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.png
+    - img: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%812.png
       link:
-      text: wechat
-    - img: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.png
+      text: 微信
+    - img: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%812.png
       link:
-      text: alipay
+      text: 支付宝
 
 # Post edit
 # Easily browse and edit blog source code online.
