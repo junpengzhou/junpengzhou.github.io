@@ -225,7 +225,7 @@ wordcount:
   enable: true
   post_wordcount: true
   min2read: true
-  total_wordcount: true
+  total_wordcount: false
 
 # Display the article introduction on homepage
 # 1: description
