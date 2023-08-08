@@ -165,6 +165,7 @@ bangumi: # 追番设置
   proxy:
     host: ''
     port: ''
+  pagination: true
   extra_options:
     top_img: false
     lazyload:
