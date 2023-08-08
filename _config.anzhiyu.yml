@@ -1039,9 +1039,9 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 未知宇宙
-    title: 一起探索明亮的未来
-    image: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%AE%87%E8%88%AA%E5%91%98%E6%8E%A2%E7%B4%A2%E6%98%8E%E4%BA%AE%E7%9A%84%E6%9C%88%E7%90%83-banner.webp
+    tips: 新宇宙
+    title: 一起探索宇宙间的光亮
+    image: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%AE%87%E8%88%AA%E5%91%98%E6%91%98%E6%98%9F%E6%98%9F-banner-black.png
     link: https://junpengzhou.github.io/
 
 # 朋友圈配置
