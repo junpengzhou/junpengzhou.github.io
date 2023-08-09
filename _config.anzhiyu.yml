@@ -1230,7 +1230,7 @@ CDN:
     # lazyload:
     # instantpage:
     # typed:
-    # pangu:
+    pangu: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/pangu/4.0.7/pangu.min.js
     # fancybox_css:
     # fancybox:
     # medium_zoom:
