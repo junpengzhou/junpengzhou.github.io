@@ -156,7 +156,7 @@ bangumi: # 追番设置
   lazyloadAttrName: 'data-src=__image__'
   loading:
   showMyComment: false
-  pagination: false
+  pagination: true
   metaColor:
   color:
   webp:
@@ -165,7 +165,6 @@ bangumi: # 追番设置
   proxy:
     host: ''
     port: ''
-  pagination: true
   extra_options:
     top_img: false
     lazyload:
