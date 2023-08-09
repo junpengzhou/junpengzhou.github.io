@@ -157,7 +157,7 @@ bangumi: # 追番设置
   lazyloadAttrName: 'data-src=__image__'
   loading:
   showMyComment: false
-  pagination: true
+  pagination: false
   metaColor:
   color:
   webp:
