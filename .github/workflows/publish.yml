@@ -42,6 +42,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
+      - name: Get Bangumi Data
+        run: pnpm run bangumi
       - name: Build
         run: pnpm run build
       - name: Deploy
