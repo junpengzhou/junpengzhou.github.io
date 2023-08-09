@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - develop # default branch
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
 
 jobs:
   pages:
@@ -19,17 +24,26 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - name: Cache NPM dependencies
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - name: Cache PNPM dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.OS }}-npm-cache
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
       - name: Build
-        run: npm run build
+        run: pnpm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
