@@ -1,6 +1,6 @@
 menu:
   文章:
-    隧道: /archives/ || anzhiyu-icon-box-archive
+    总览: /archives/ || anzhiyu-icon-box-archive
     分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
 
@@ -10,7 +10,6 @@ menu:
     留言板: /comments/ || anzhiyu-icon-envelope
 
   我的:
-    音乐馆: /music/ || anzhiyu-icon-music
     追番页: /bangumis/ || anzhiyu-icon-bilibili
     相册集: /album/ || anzhiyu-icon-images
 
@@ -430,26 +429,27 @@ footer:
   custom_text: 学习是一种信仰，分享是一种快乐！
   runtime:
     enable: false
-    launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
+    launch_time: 08/07/2020 00:00:00 # 网站上线时间
+    work_img: https://img.shields.io/badge/工作中-冲-d021d6?style=flat&logo=GitHub
     work_description: 冲一冲~
-    offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
+    offduty_img: https://img.shields.io/badge/下班了-躺-d021d6?style=flat&logo=GitHub
     offduty_description: 躺一躺~
   # 徽标部分配置项 https://shields.io/
-  # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
     enable: true
     list:
       - link: https://hexo.io/ #徽标指向网站链接
-        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
+        shields: https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo #徽标API
         message: 本站由Hexo驱动
       - link: https://github.com/
-        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg
+        shields: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
         message: 本站项目由Github托管
       - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-        shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
+        shields: https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris
         message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
-      - link: https://www.netlify.com/
+      - link: https://www.foreverblog.cn/go.html
+        shields: https://img.foreverblog.cn/wormhole_4_tp.gif
+        message: 穿梭虫洞-随机访问十年之约友链博客
   socialBar:
     enable: true
     centerImg:
