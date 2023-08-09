@@ -22,7 +22,7 @@ menu:
 # nav相关配置
 nav:
   enable: true
-  travelling: false
+  travelling: true
   clock: false
   menu:
     - title: 网页
@@ -449,6 +449,7 @@ footer:
       - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
         message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+      - link: https://www.netlify.com/
   socialBar:
     enable: true
     centerImg:
@@ -490,14 +491,14 @@ footer:
             link: https://www.foreverblog.cn/
           - title: 开往
             link: https://github.com/travellings-link/travellings
-      - title: 主题
+      - title: 虫洞
         links:
-          - title: 文档
-            link: /docs/
-          - title: 源码
-            link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-          - title: 更新日志
-            link: /update/
+          - title: 了解虫洞
+            link: https://www.foreverblog.cn/notice/16.html
+          - title: 穿梭虫洞
+            link: https://www.foreverblog.cn/go.html
+          - title: 虫洞中文网
+            link: https://wormholechn.medium.com/
       - title: 导航
         links:
           - title: 即刻短文
