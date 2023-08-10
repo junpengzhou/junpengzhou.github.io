@@ -108,8 +108,12 @@ theme: anzhiyu
 deploy:
   - type: 'git'
     repo:
-      github:
-          url: https://github.com/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
+      # github:
+      #     url: https://github.com/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
+      #     branch: gh-pages # GitHub Pages的分支
+      #     token: '修改成我发布的accessToken'
+      coding:
+          url: https://git.coding.net/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
           branch: gh-pages # GitHub Pages的分支
           token: '修改成我发布的accessToken'
     name: 'junpengzhou'
