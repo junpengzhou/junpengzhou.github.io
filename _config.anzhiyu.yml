@@ -54,6 +54,7 @@ copy:
 social:
   Github: https://github.com/junpengzhou || anzhiyu-icon-github
   BiliBili: https://space.bilibili.com/19265913 || anzhiyu-icon-bilibili
+  NASA: https://mars.nasa.gov/participate/send-your-name/future/certificate/751767460870 || NASA计划 ||anzhiyu-rocket
 
 # 作者卡片 状态
 author_status:
@@ -327,7 +328,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk
-  use: # Twikoo/Waline
+  use: Twikoo # Twikoo/Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -373,8 +374,8 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
-  region:
+  envId: https://twikoo-tan-ten.vercel.app
+  region: ap-shanghai
   visitor: false
   option:
 
@@ -455,7 +456,7 @@ footer:
     centerImg:
     left:
       - title: email
-        link: mailto:anzhiyu-c@qq.com
+        link: mailto:jeepzhou11@163.com
         icon: anzhiyu-icon-envelope
       - title: 微博
         link: https://weibo.com/u/6378063631
@@ -1216,7 +1217,7 @@ CDN:
     # pjax:
     # blueimp_md5:
     # valine:
-    # twikoo:
+    twikoo: https://cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js
     # waline_js:
     # waline_css:
     # sharejs:
