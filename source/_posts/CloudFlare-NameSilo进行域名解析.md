@@ -1,8 +1,10 @@
 ---
 title: CloudFlare+NameSilo进行域名解析
-cover: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%A4%8F%E6%97%A5%E8%8D%B7%E5%8F%B6%E4%B8%8B%E6%BD%9C%E6%B0%B4-cover.webp
+cover: >-
+  https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%A4%8F%E6%97%A5%E8%8D%B7%E5%8F%B6%E4%B8%8B%E6%BD%9C%E6%B0%B4-cover.webp
 tags: 建站经验
 categories: 技术分享
+abbrlink: 2c13306e
 date: 2023-08-12 10:00:20
 ---
 # 一、 前提条件
