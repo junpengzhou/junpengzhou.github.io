@@ -1164,7 +1164,7 @@ shortcutKey:
 
 # 无障碍优化（在首页按下「shift + ?」以查看效果）
 accesskey:
-  enable: true
+  enable: false
 
 # 友情链接顶部相关配置
 linkPageTop: 
