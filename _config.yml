@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: 'https://junpengzhou.github.io'
+url: 'https://blog.junpengzhou.top'
 # permalink: ':year/:month/:day/:title/' # 原有的方式配置，改了标题名或日期时候原有链接会出现失效，所以做此优化
 permalink: article/:abbrlink.html # article是自定义前缀
 abbrlink:
@@ -199,3 +199,11 @@ githubEmojis:
   inject: true
   styles:
   customEmojis:
+# Extensions
+plugins:
+  hexo-generator-feed
+# Feed用于生成订阅的Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
