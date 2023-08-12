@@ -374,7 +374,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twikoo-tan-ten.vercel.app
+  envId: https://twikoo.junpengzhou.top
   region: ap-shanghai
   visitor: false
   option:
