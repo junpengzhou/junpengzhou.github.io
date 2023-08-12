@@ -87,6 +87,9 @@
     music_bg: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%8E%8B%E8%8F%B2%E5%B0%81%E9%9D%A2-cover.jpg
     music_link: /music
   reward_list:
+    - name: 最上川
+      amount: 8.88
+      datatime: 2023-08-12
     - name: 豆小丁(*^▽^*)
       amount: 8.8
       datatime: 2023-03-28
