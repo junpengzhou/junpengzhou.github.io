@@ -192,3 +192,10 @@ cinema: # 追剧设置
   extraOrder:
   extra_options:
     key: value
+# 增加emojis的支持
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
