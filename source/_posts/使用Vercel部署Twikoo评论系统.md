@@ -16,31 +16,31 @@ date: 2023-08-11 12:20:35
 
    ![image-20230811125436976](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811125436976.png)
 
-   点击Create创建deployment
+   * 点击Create创建deployment
 
    ![image-20230811142520047](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811142520047.png)
 
-   选择数据库（如需免费请选择M0），服务提供商选择亚马逊云，地区选择N. Virginia(us-east-1)
+   * 选择数据库（如需免费请选择M0），服务提供商选择亚马逊云，地区选择N. Virginia(us-east-1)
 
    ![image-20230811142728438](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811142728438.png)
 
-   设置用户名和密码
+   * 设置用户名和密码
 
    ![image-20230811143059729](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811143059729.png)
 
-   选择云环境，并设置ip白名单，如果要全公网可访问设置ip白名单为0.0.0.0/0
+   * 选择云环境，并设置ip白名单，如果要全公网可访问设置ip白名单为0.0.0.0/0
 
    ![image-20230811143311162](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811143311162.png)
 
-   出现Congratulations字样！离成功又近了！
+   * 出现Congratulations字样！离成功又近了！
 
    ![image-20230811143418916](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811143418916.png)
 
-   点击Connect连接，复制连接参数
+   * 点击Connect连接，复制连接参数
 
    ![image-20230811143647250](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811143647250.png)
 
-   使用工具测试连接成功（DataGrip、Navicat、或者MangoDB for vscode等工具都可以）
+   * 使用工具测试连接成功（DataGrip、Navicat、或者MangoDB for vscode等工具都可以）
 
    ![image-20230811144134855](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230811144134973.png)
 3. 在 Clusters 页面点击 CONNECT，按步骤设置允许所有 IP 地址的连接（[为什么？open in new window](https://vercel.com/support/articles/how-to-allowlist-deployment-ip-address)），创建数据库用户，并记录数据库连接字符串，请将连接字符串中的 `<password>` 修改为数据库密码
