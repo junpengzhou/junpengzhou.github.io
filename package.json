@@ -5,7 +5,7 @@
   "scripts": {
     "update": "git pull && git submodule update --remote",
     "bangumi": "hexo bangumi -u",
-    "build": "hexo generate",
+    "build": "hexo generate && hexo algolia",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
@@ -16,6 +16,7 @@
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-abbrlink": "^2.2.1",
+    "hexo-algoliasearch": "^1.0.0",
     "hexo-bilibili-bangumi": "^1.8.8",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-github-emojis": "^3.0.5",

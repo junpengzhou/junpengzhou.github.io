@@ -201,9 +201,25 @@ githubEmojis:
   customEmojis:
 # Extensions
 plugins:
-  hexo-generator-feed
+  - hexo-generator-feed
+  - hexo-algoliasearch
 # Feed用于生成订阅的Atom
 feed:
   type: atom
   path: atom.xml
   limit: 20
+algolia:
+  appId: "S58UP7YT4C"
+  apiKey: "ec54556c03e6ea9b3ecdb7332bf0d059"
+  adminApiKey: "08a2ebf9ce36aabaa34365dbe34fdec3"
+  chunkSize: 5000
+  indexName: "blog_junppengzhoutop"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
