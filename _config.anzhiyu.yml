@@ -1201,7 +1201,7 @@ CDN:
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/custom
-  third_party_provider: elemecdn
+  third_party_provider: cbd
 
   # Add version number to CDN, true or false
   version: true
@@ -1220,7 +1220,7 @@ CDN:
     # algolia_js:
     algolia_search: https://cdn.staticfile.org/algoliasearch/4.19.1/algoliasearch.umd.min.js
     instantsearch_v4: https://npm.elemecdn.com/instantsearch.js@4.46.1/dist/instantsearch.production.min.js
-    # pjax:
+    pjax: https://npm.elemecdn.com/pjax@0.2.8/pjax.min.js
     # blueimp_md5:
     # valine:
     twikoo: https://cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js
@@ -1235,15 +1235,15 @@ CDN:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    # lazyload:
+    lazyload: https://npm.elemecdn.com/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js
     instantpage: https://cdn.staticfile.org/instant.page/5.2.0/instantpage.min.js
     # typed:
     pangu: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/pangu/4.0.7/pangu.min.js
     fancybox_css: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.css
     fancybox: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.umd.js
     # medium_zoom:
-    # snackbar_css:
-    # snackbar:
+    snackbar_css: https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.css
+    snackbar: https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.js
     # activate_power_mode:
     # fireworks:
     # click_heart:
@@ -1260,12 +1260,12 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
-    # pace_js:
+    pace_js: https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js
     # pace_default_css:
     # countup_js:
     # gsap_js:
-    # busuanzi:
+    busuanzi: https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.js
     # rightmenu:
     # waterfall:
-    ali_iconfont_css: https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css
+    # ali_iconfont_css: https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css
     # accesskey_js:
