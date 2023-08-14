@@ -27,8 +27,13 @@ nav:
     - title: 网页
       item:
         - name: 博客
-          link: https://blog.junpengzhou.top/
+          link: /
           icon: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/jp-blog-favicon.ico
+    - title: 关于
+      item:
+        - name: 关于作者
+          link: /about/
+          icon: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/avatar.png
 
 # Code Blocks (代码相关)
 # --------------------------------------
@@ -1209,6 +1214,8 @@ CDN:
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
   # For example: https://cdn.cbd.int/${name}@latest/${file}
+  # https://butterfly.js.org/posts/ceeb73f/#version
+
   custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
 
   option:

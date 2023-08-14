@@ -5,7 +5,8 @@
   "scripts": {
     "update": "git pull && git submodule update --remote",
     "bangumi": "hexo bangumi -u",
-    "build": "hexo generate && hexo algolia",
+    "build": "hexo generate",
+    "algolia": "hexo algolia",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
