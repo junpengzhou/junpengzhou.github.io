@@ -1208,6 +1208,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # For example: https://cdn.cbd.int/${name}@latest/${file}
   custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
 
   option:
@@ -1218,7 +1219,7 @@ CDN:
     # local_search:
     # algolia_js:
     algolia_search: https://cdn.staticfile.org/algoliasearch/4.19.1/algoliasearch.umd.min.js
-    instantsearch_v4: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instantsearch.js/4.39.0/instantsearch.production.min.js
+    # instantsearch_v4: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instantsearch.js/4.39.0/instantsearch.production.min.js
     # pjax:
     # blueimp_md5:
     # valine:
@@ -1238,8 +1239,8 @@ CDN:
     instantpage: https://cdn.staticfile.org/instant.page/5.2.0/instantpage.min.js
     # typed:
     pangu: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/pangu/4.0.7/pangu.min.js
-    # fancybox_css:
-    # fancybox:
+    fancybox_css: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.css
+    fancybox: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.umd.js
     # medium_zoom:
     # snackbar_css:
     # snackbar:
@@ -1266,5 +1267,5 @@ CDN:
     # busuanzi:
     # rightmenu:
     # waterfall:
-    # ali_iconfont_css:
+    ali_iconfont_css: https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css
     # accesskey_js:
