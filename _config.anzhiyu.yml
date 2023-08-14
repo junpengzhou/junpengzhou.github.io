@@ -1042,8 +1042,8 @@ home_top:
   default_descr:
   swiper:
     enable: false
-    swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
-    swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
+    swiper_css: https://cdn.staticfile.org/Swiper/10.1.0/swiper-bundle.min.css #swiper css依赖
+    swiper_js: https://cdn.staticfile.org/Swiper/10.1.0/swiper-bundle.min.js #swiper js依赖
   banner:
     tips: 新宇宙
     title: 一起探索宇宙间的光亮
@@ -1217,7 +1217,7 @@ CDN:
     # translate:
     # local_search:
     # algolia_js:
-    # algolia_search:
+    algolia_search: https://cdn.staticfile.org/algoliasearch/4.19.1/algoliasearch.umd.min.js
     instantsearch_v4: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instantsearch.js/4.39.0/instantsearch.production.min.js
     # pjax:
     # blueimp_md5:
@@ -1235,7 +1235,7 @@ CDN:
     # canvas_fluttering_ribbon:
     # canvas_nest:
     # lazyload:
-    instantpage: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js
+    instantpage: https://cdn.staticfile.org/instant.page/5.2.0/instantpage.min.js
     # typed:
     pangu: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/pangu/4.0.7/pangu.min.js
     # fancybox_css:
