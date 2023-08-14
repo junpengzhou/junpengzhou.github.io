@@ -250,7 +250,7 @@ anchor: false
 toc:
   post: true
   page: false
-  number: true
+  number: false
   expand: true
   style_simple: false # for post
   scroll_percent: true
