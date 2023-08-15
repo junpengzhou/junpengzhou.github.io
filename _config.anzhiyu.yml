@@ -54,12 +54,14 @@ copy:
     limit_count: 100
 
 # social settings (社交图标设置)
+# 内置的图标素材：https://www.iconfont.cn/collections/detail?cid=44481
 # formal:
 #   name: link || icon
 social:
-  Github: https://github.com/junpengzhou || anzhiyu-icon-github
   BiliBili: https://space.bilibili.com/19265913 || anzhiyu-icon-bilibili
-  NASA: https://mars.nasa.gov/participate/send-your-name/future/certificate/751767460870 || NASA计划 ||anzhiyu-rocket
+  Email: https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=jeepzhou11@163.com || anzhiyu-icon-envelope
+  RSS: atom.xml || anzhiyu-icon-rss
+  NASA: https://mars.nasa.gov/participate/send-your-name/future/certificate/751767460870 || anzhiyu-icon-rocket
 
 # 作者卡片 状态
 author_status:
