@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Alpha Dog
-subtitle: 'Useful, interesting, and meaningful'
-description: 'Junpengzhou的博客，记录生活，记录学习，记录成长'
+title: AlphaDog
+subtitle: 'Junpengzhou's Blog'
+description: 'Useful, interesting, and meaningful'
 keywords: '技术,前端,后端,美食,工程管理,数学,英语,密码学,Java,Python,机器学习,AI,读书,播客,工具'
 author: 'Junpengzhou'
 language: 'zh-CN'
