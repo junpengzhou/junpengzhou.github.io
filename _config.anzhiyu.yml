@@ -191,8 +191,9 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%BF%AB%E4%BA%86%E6%96%B0%E9%97%BB%E6%92%AD%E6%8A%A5.webp
-
+    - https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%94%B5%E5%8A%A8%E8%BD%A6%E9%AA%91%E8%A1%8C%E8%83%8C%E6%99%AF-cover.png
+    - https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E6%B2%B3%E7%95%94%E7%9A%84%E9%83%81%E9%87%91%E9%A6%99-cover.webp
+    - https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%A4%8F%E6%97%A5%E8%8D%B7%E5%8F%B6%E4%B8%8B%E6%BD%9C%E6%B0%B4-cover.webp
 # Replace Broken Images (替换无法显示的图片)
 error_img:
   flink: /img/friend_404.gif
