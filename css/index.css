@@ -14304,7 +14304,7 @@ blockquote {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-  background: #303030;
+  background: #111;
 }
 #sidebar #sidebar-menus > .avatar-img {
   margin: 50px auto 20px;
