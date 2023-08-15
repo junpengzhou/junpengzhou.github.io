@@ -635,6 +635,7 @@ theme_color:
   scrollbar_color: "var(--anzhiyu-scrollbar)"
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
+  inside_sidebar_background: "#303030" # @since 1.5.4 支持手机端侧边栏可定制颜色
 
 # 表格隔行变色
 table_interlaced_discoloration: false
