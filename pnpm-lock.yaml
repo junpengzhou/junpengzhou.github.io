@@ -17,6 +17,9 @@ dependencies:
   hexo-bilibili-bangumi:
     specifier: ^1.8.8
     version: 1.8.8
+  hexo-butterfly-envelope:
+    specifier: ^1.0.15
+    version: 1.0.15
   hexo-deployer-git:
     specifier: ^4.0.0
     version: 4.0.0
@@ -1871,6 +1874,12 @@ packages:
       moment: 2.29.4
       mv: 2.1.1
       safe-json-stringify: 1.2.0
+    dev: false
+
+  /hexo-butterfly-envelope@1.0.15:
+    resolution: {integrity: sha512-Z12iYDhrrJkARSvCIYTVRPrlipLE9o5Zeh2kozj/MbLz5tcQmfr62w+qu+hOJh2XiZucAyyoUyZq5faKP4YD4A==}
+    dependencies:
+      pug: 3.0.2
     dev: false
 
   /hexo-cli@4.3.1:
