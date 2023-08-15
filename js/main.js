@@ -10,6 +10,8 @@ var $bodyWrap = document.getElementById("body-wrap");
 var $main = document.querySelector("main");
 var dragStartX;
 
+var popupWindowTimer = null
+
 var adjectives = [
   "美丽的",
   "英俊的",
@@ -599,6 +601,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let initTop = 0;
     let isChatShow = true;
     const $header = document.getElementById("page-header");
+    const $popupWindow = document.getElementById('popup-window')
     const isChatBtnHide = typeof chatBtnHide === "function";
     const isChatBtnShow = typeof chatBtnShow === "function";
 
@@ -672,7 +675,23 @@ document.addEventListener("DOMContentLoaded", function () {
         // ignore small scrolls
         return;
       }
+      if ($popupWindow && $popupWindow.classList.contains('show-popup-window') && currentTop > 60 && delta > 20 && lastScrollTop != 0) {
+        // 滚动后延迟1s关闭弹窗
+        anzhiyu.throttle(() => {
+          if (popupWindowTimer) clearTimeout(popupWindowTimer)
+          popupWindowTimer = setTimeout(() => {
+            if (!$popupWindow.classList.contains("popup-hide")) {
+              $popupWindow.classList.add('popup-hide');
+            }
+            setTimeout(() => {
+              $popupWindow.classList.remove('popup-hide');
+              $popupWindow.classList.remove('show-popup-window');
+            }, 1000)
+          }, 1000);
+        }, 1000)()
+      }
       lastScrollTop = currentTop;
+
       if (currentTop > 26) {
         if (isDown) {
           if ($header.classList.contains("nav-visible")) $header.classList.remove("nav-visible");
