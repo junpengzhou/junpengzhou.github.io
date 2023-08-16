@@ -1,0 +1,14 @@
+- class_name: 好物分享
+  description: 实用、美观、高性价比
+  tip: 好物提升幸福感
+  top_background: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80%E4%B8%89%E4%BD%93%E6%98%9F%E7%90%83-banner.webp
+  good_things:
+    - title: 生产力
+      description: 提升自己生产效率的硬件设备
+      equipment_list:
+        - name: HUAWEI MatePad 11英寸 2023 柔光版
+          specification: 曜石黑/8GB/256GB/【手写笔】套装
+          description: '20Hz柔光屏，华为笔记'
+          image: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%8D%8E%E4%B8%BA%E5%B9%B3%E6%9D%BF%E5%B9%BF%E5%91%8Alogo.webp
+          link: https://www.vmall.com/product/10086934642094.html
+          price: 3398
