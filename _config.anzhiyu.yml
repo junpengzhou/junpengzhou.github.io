@@ -6,7 +6,8 @@ menu:
 
   友链:
     友情链接: /link/ || anzhiyu-icon-link
-    博客圈: /fcircle/ || anzhiyu-icon-artstation
+    博客快讯: /fcircle/ || anzhiyu-icon-artstation
+    博客鱼塘: /fishpound/ || anzhiyu-icon-fish
     留言板: /comments/ || anzhiyu-icon-envelope
 
   分享:
@@ -1056,12 +1057,13 @@ home_top:
     image: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%AE%87%E8%88%AA%E5%91%98%E6%91%98%E6%98%9F%E6%98%9F-banner-black.png
     link: https://blog.junpengzhou.top/
 
-# 朋友圈配置
+# 鱼塘配置
 friends_vue:
-  enable: false
+  enable: true
   vue_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.1/friends/index.4f887d95.js
-  apiurl: # 朋友圈后端地址
-  top_background:
+  apiurl: https://friendscircle.junpengzhou.top/
+  top_background: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%8F%AF%E7%88%B1%E9%B8%AD%E5%AD%90%E6%B8%B8%E4%B9%90%E5%9B%AD-cover.webp
+  path: /fishpound #【可选】fcircle的路径名称。默认为 fcircle，生成的页面为 fcircle/index.html
 
 # 黑色模式粒子效果canvas
 universe:
