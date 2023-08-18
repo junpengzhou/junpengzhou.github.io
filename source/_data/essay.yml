@@ -7,6 +7,8 @@
   home_essay: true
   top_background: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%94%B5%E5%8A%A8%E8%BD%A6%E9%AA%91%E8%A1%8C%E8%83%8C%E6%99%AF-cover.png
   essay_list:
+    - content: V1.3.0完成友链朋友圈添加
+      date: 2020/09/15
     - content: V1.2.0新增友链计划
       date: 2020/09/11
     - content: V1.1.0发布,文章可评论啦！
