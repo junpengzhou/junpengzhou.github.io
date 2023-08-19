@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "update": "git pull && git submodule update --remote",
-    "bangumi": "hexo bangumi -u",
+    "bangumi": "hexo bangumi -u && hexo douban -bgms",
     "build": "hexo generate",
     "algolia": "hexo algolia",
     "clean": "hexo clean",
