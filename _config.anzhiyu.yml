@@ -1060,7 +1060,7 @@ home_top:
 # 鱼塘配置
 friends_vue:
   enable: true
-  vue_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.1/friends/index.4f887d95.js
+  vue_js: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/friends_index@1.1.1.js
   apiurl: https://friendscircle.junpengzhou.top/
   top_background: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E5%8F%AF%E7%88%B1%E9%B8%AD%E5%AD%90%E6%B8%B8%E4%B9%90%E5%9B%AD-cover.webp
   path: /fishpound #【可选】fcircle的路径名称。默认为 fcircle，生成的页面为 fcircle/index.html
