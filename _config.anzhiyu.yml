@@ -12,10 +12,10 @@ menu:
 
   分享:
     番剧分享: /bangumis/ || anzhiyu-icon-bilibili
-    读书分享: /books/ || anzhiyu-icon-images
+    读书分享: /books/ || anzhiyu-icon-book
     电影分享: /movies/ || anzhiyu-icon-images
     游戏分享: /games/ || anzhiyu-icon-images
-    歌曲分享: /songs/ || anzhiyu-icon-images
+    歌曲分享: /songs/ || anzhiyu-icon-music
     好物分享: /equipment/ || anzhiyu-icon-dice-d20
 
   关于:
