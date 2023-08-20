@@ -1,14 +1,16 @@
 name: npm publish
 
 on:
+  schedule:
+    - cron: '0 0,12 * * *' # every day at midnight and noon
   push:
     branches:
-      - develop # default branch
-      - main
+      - develop # develop branch
+      - main # default branch
   pull_request:
     branches:
-      - develop
-      - main
+      - develop # develop branch
+      - main # default branch
 
 jobs:
   pages:
