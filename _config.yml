@@ -195,6 +195,34 @@ cinema: # 追剧设置
   extraOrder:
   extra_options:
     key: value
+# 豆瓣组件，文档见：https://github.com/mythsman/hexo-douban
+douban:
+  id: 223549135
+  builtin: false
+  item_per_page: 10
+  meta_max_line: 4
+  customize_layout: page
+  book:
+    path: books/index.html
+    title: '推荐书籍列表'
+    quote: '沉入时光，与好书对话'
+    option:
+  movie:
+    path: movies/index.html
+    title: '推荐影视清单'
+    quote: '视听盛宴，感其深意'
+    option:
+  game:
+    path: games/index.html
+    title: '推荐游戏清单'
+    quote: '适当益脑，过度伤身'
+    option:
+  song:
+    path: songs/index.html
+    title: '推荐音乐歌单'
+    quote: '余音绕梁，三日不绝'
+    option:
+  timeout: 10000
 # 增加emojis的支持
 githubEmojis:
   enable: true
@@ -248,31 +276,3 @@ envelope_comment:
     comments: true
     top_img: false
     type: envelope
-# 豆瓣组件，文档见：https://github.com/mythsman/hexo-douban
-douban:
-  id: 223549135
-  builtin: false
-  item_per_page: 10
-  meta_max_line: 4
-  customize_layout: page
-  book:
-    path: books/index.html
-    title: 'This is my book title'
-    quote: 'This is my book quote'
-    option:
-  movie:
-    path: movies/index.html
-    title: 'This is my movie title'
-    quote: 'This is my movie quote'
-    option:
-  game:
-    path: games/index.html
-    title: 'This is my game title'
-    quote: 'This is my game quote'
-    option:
-  song:
-    path: songs/index.html
-    title: 'This is my song title'
-    quote: 'This is my song quote'
-    option:
-  timeout: 10000 
