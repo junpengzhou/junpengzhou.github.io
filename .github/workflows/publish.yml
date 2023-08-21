@@ -2,7 +2,7 @@ name: npm publish
 
 on:
   schedule:
-    - cron: '0 0,12 * * *' # every day at midnight and noon
+    - cron: '0 16,4 * * *' # every day at midnight and noon（Use UTC time,China Standard Time is UTC:+8:00）
   push:
     branches:
       - develop # develop branch
