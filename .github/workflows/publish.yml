@@ -29,7 +29,6 @@ jobs:
       - name: Install pandoc for mathjax
         run: |
           cd /tmp
-          pandoc --version
           if [ type pandoc > /dev/null 2>&1 ]; then
             echo 'Already installed pandoc!'
           else
@@ -40,6 +39,7 @@ jobs:
               echo 'Pandoc download successful!'
             fi
             sudo dpkg -i pandoc-3.1.6.1-1-amd64.deb
+            pandoc --version
             echo 'Pandoc install successful!'
           fi
       - name: Install pnpm
