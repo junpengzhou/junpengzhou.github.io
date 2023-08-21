@@ -35,7 +35,7 @@ jobs:
             if [ -f pandoc-3.1.6.1-1-amd64.deb ]; then
               echo 'Already downloaded pandoc!'
             else
-              wget -cO https://github.com/jgm/pandoc/releases/download/3.1.6.1/pandoc-3.1.6.1-1-amd64.deb
+              wget -cN https://github.com/jgm/pandoc/releases/download/3.1.6.1/pandoc-3.1.6.1-1-amd64.deb -O pandoc-3.1.6.1-1-amd64.deb
               echo 'Pandoc download successful!'
             fi
             sudo dpkg -i pandoc-3.1.6.1-1-amd64.deb
