@@ -29,7 +29,8 @@ jobs:
       - name: Install pandoc for mathjax
         run: |
           cd /tmp
-          if [ command -v pandoc > /dev/null 2>&1 ]; then
+          pandoc --version
+          if [ type pandoc > /dev/null 2>&1 ]; then
             echo 'Already installed pandoc!'
           else
             if [ -f pandoc-3.1.6.1-1-amd64.deb ]; then
@@ -61,7 +62,6 @@ jobs:
         run: pnpm install
       - name: Build Dist and Index
         run: |
-          pandoc --version
           pnpm run clean
           pnpm run spider
           pnpm run build
