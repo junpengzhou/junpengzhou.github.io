@@ -26,6 +26,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+      - name: Install pandoc for mathjax
+        run: |
+          cd /tmp
+          if [ command -v pandoc > /dev/null 2>&1 ]; then
+            echo 'Already installed pandoc!'
+          else
+            if [ -f pandoc-3.1.6.1-1-amd64.deb ]; then
+              echo 'Already downloaded pandoc!'
+            else
+              wget -cO https://github.com/jgm/pandoc/releases/download/3.1.6.1/pandoc-3.1.6.1-1-amd64.deb
+              echo 'Pandoc download successful!'
+            fi
+            sudo dpkg -i pandoc-3.1.6.1-1-amd64.deb
+            echo 'Pandoc install successful!'
+          fi
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -46,6 +61,7 @@ jobs:
         run: pnpm install
       - name: Build Dist and Index
         run: |
+          pandoc --version
           pnpm run clean
           pnpm run spider
           pnpm run build
