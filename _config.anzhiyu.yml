@@ -1308,6 +1308,7 @@ inject:
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要请不要修改
+# 目前使用的：https://cdn.onmicrosoft.cn/
 CDN:
   # The CDN provider of internal scripts (主题内部 js 的 cdn 配置)
   # option: local/elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/custom
