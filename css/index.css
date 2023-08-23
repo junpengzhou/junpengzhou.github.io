@@ -6560,7 +6560,12 @@ body[data-type="link"] #page .page-title {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   display: inline-block;
-  top: 90px;
+  bottom: 0px;
+}
+@media screen and (max-width: 768px) {
+  #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap {
+    bottom: 20px;
+  }
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .sticky-warp {
   position: absolute;
