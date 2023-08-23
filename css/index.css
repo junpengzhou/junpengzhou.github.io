@@ -6560,7 +6560,7 @@ body[data-type="link"] #page .page-title {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   display: inline-block;
-  bottom: 15px;
+  top: 90px;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .sticky-warp {
   position: absolute;
