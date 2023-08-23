@@ -168,6 +168,18 @@ katex:
   per_page: false
   hide_scrollbar: true
 
+pandoc:
+  args:
+    - '-f'
+    - 'commonmark_x'
+    - '-t'
+    - 'html'
+    - '--mathjax'
+  extensions:
+    - '+emoji'
+    - '+hard_line_breaks'
+    - '-implicit_figures'
+
 # Image (图片设置)
 # --------------------------------------
 
