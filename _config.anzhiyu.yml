@@ -736,6 +736,7 @@ sidebar:
   category: true
   menus_items: true
   tags_cloud: true
+  nav_menu_project: true
 
 # 表格隔行变色
 table_interlaced_discoloration: false
