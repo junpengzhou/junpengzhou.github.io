@@ -7,6 +7,10 @@
   home_essay: true
   top_background: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%94%B5%E5%8A%A8%E8%BD%A6%E9%AA%91%E8%A1%8C%E8%83%8C%E6%99%AF-cover.png
   essay_list:
+    - content: V1.6.0移动端的菜单栏更新到最新版本，优化了移动端的体验
+      date: 2020/09/28
+    - content: V1.5.0更换markdown渲染器，优化多行公式的加载
+      date: 2020/09/28
     - content: V1.4.0开始读书分享、影视分享组件构建
       date: 2020/09/18
     - content: V1.3.0完成友链朋友圈添加
