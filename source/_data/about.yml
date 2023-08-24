@@ -19,12 +19,29 @@
   careers:
     tips: 生涯
     title: 无限进步
+    # list:
+      # - time: 时间/时间段
+      # - desc: 描述
+    list:
+      - time: 2014 ~ 2018
+        desc: 江苏通信工程
+      - time: 2016 ~ 2017
+        desc: 实习前端开发工程师
+      - time: 2016 ~ 2017
+        desc: JAVA开发工程师
+      - time: 2017 ~ 2018
+        desc: 实验室安卓开发工程师
+      - time: 2018 ~ 2023
+        desc: JAVA后端开发工程师&研发经理
+      - time: 2023 ~ 2023
+        desc: 技术架构师&项目经理
     item:
-      - 2014 ~ 2018 江苏大学通信工程
+      - 2014 ~ 2018 通信工程
       - 2016 ~ 2017 实习前端开发工程师
       - 2018 ~ 2023 JAVA开发工程师
       - 2023 ~ 2023 技术架构师&项目经理
     img: https://bu.dusays.com/2023/04/21/644287166329b.png
+    background: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E9%A3%9E%E6%9C%BA%E9%A3%9E%E8%B5%B7%E6%9D%A5-%E5%8A%A8%E5%9B%BE.gif
   statistic:
     link: /archives
     text: 文章隧道
