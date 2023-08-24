@@ -1191,15 +1191,17 @@ diytitle:
 
 # 留言弹幕配置
 comment_barrage_config:
-  enable: false
+  enable: true
   # 同时最多显示弹幕数
   maxBarrage: 1
   # 弹幕显示间隔时间ms
   barrageTime: 4000
   # token，在控制台中获取
-  accessToken: ""
+  accessToken: "24abc38bb05941a9830b8495c2db7637"
   # 博主邮箱md5值
-  mailMd5: ""
+  mailMd5: "CC9A3999333A6826AFEAF269B1C49D06"
+  # 添加博主友链的评论自定义格式
+  addFriendPlaceholder: "站点名称：\n网站地址：\n头像地址：\n站点描述：\n站点截图（可选）：\n"
 
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
@@ -1282,6 +1284,8 @@ accesskey:
 linkPageTop: 
   enable: true
   title: 与众多博主共同进步
+  # 添加博主友链的评论自定义格式
+  addFriendPlaceholder: "站点名称：\n网站地址：\n头像地址：\n站点描述：\n站点截图（可选）：\n"
 
 # 缩略图后缀 archive/tag/category 页面单独开启后缀
 pageThumbnailSuffix: ''
