@@ -905,7 +905,7 @@ aside:
     name_link: /
   card_announcement:
     enable: false
-    content: 欢迎来看我的博客鸭~
+    content: 这边是发布公告的地方，如果有需要全站公告的信息写在这里！
   # 微信公众号
   card_weixin:
     enable: false

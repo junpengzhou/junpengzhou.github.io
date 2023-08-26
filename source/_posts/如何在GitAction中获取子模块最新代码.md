@@ -34,5 +34,21 @@ date: 2023-08-01 11:38:01
     with:
       args: git submodule update --init --recursive
   ```
+  
+## Git submodule 切换分支的代码
+* 切换分支语法
 
-原文链接：https://github.com/marketplace/actions/checkout-submodules
+```shell
+  git config -f .gitmodules submodule.xxx.branch xxx1
+```
+
+* 示例
+
+```shell
+  git config -f .gitmodules submodule.themes/anzhiyu.branch dev
+```
+
+**将`xxx`替换成对应的子模块名称(可在`.gitmodules`文件中查看到)，`xxx1`替换成子模块需要的目标分支**
+
+
+> 原文链接：https://github.com/marketplace/actions/checkout-submodules
