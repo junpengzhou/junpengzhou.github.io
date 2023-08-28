@@ -8414,6 +8414,8 @@ h1.page-title + .tag-cloud-list {
   .post #aside-content {
     background: var(--anzhiyu-background);
     border: none;
+    z-index: 2;
+    margin-top: -1px;
   }
 }
 #aside-content {
@@ -8437,7 +8439,7 @@ h1.page-title + .tag-cloud-list {
 }
 @media screen and (max-width: 768px) {
   #aside-content {
-    margin-top: -1px;
+    padding: 0 20px 20px;
   }
 }
 #aside-content > .card-widget:first-child {
