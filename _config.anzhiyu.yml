@@ -1370,8 +1370,8 @@ CDN:
     fancybox_css: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.css
     fancybox: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.umd.js
     # medium_zoom:
-    snackbar_css: https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.css
-    snackbar: https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.js
+    snackbar_css: https://npm.elemecdn.com/node-snackbar@latest/dist/snackbar.min.css
+    snackbar: https://npm.elemecdn.com/node-snackbar@latest/dist/snackbar.min.js
     # activate_power_mode:
     # fireworks:
     # click_heart:
@@ -1388,7 +1388,7 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
-    pace_js: https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js
+    pace_js: https://npm.elemecdn.com/pace-js@latest/pace.min.js
     # pace_default_css:
     # countup_js:
     # gsap_js:
