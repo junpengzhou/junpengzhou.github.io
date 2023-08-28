@@ -1348,7 +1348,7 @@ CDN:
     algolia_search: https://cdn.staticfile.org/algoliasearch/4.19.1/algoliasearch.umd.min.js
     instantsearch_v4: https://npm.elemecdn.com/instantsearch.js@4.46.1/dist/instantsearch.production.min.js
     instantsearch: https://npm.elemecdn.com/instantsearch.js@4.46.1/dist/instantsearch.production.min.js
-    pjax: https://npm.elemecdn.com/pjax@0.2.8/pjax.min.js
+    pjax: https://npm.elemecdn.com/pjax@latest/pjax.min.js
     # blueimp_md5:
     # valine:
     twikoo: https://cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js
