@@ -1,9 +1,11 @@
 ---
 title: 如何获取APlayer所需要的腾讯音乐的songmid？
-date: 2023-08-28 17:40:25
-cover: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/qq%E9%9F%B3%E4%B9%90%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB-cover.jpg
+cover: >-
+  https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/qq%E9%9F%B3%E4%B9%90%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB-cover.jpg
 tags: 建站经验
 categories: 技术分享
+abbrlink: abefaec9
+date: 2023-08-28 17:40:25
 ---
 # 一、Aplayer介绍
 

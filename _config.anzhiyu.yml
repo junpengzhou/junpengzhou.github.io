@@ -117,42 +117,6 @@ docsearch:
   apiKey:  # see email
   indexName:  # see email
   option:
-    placeholder: 'Ctrl/⌘ + K 唤醒搜索服务'
-    maxResultsPerGroup: 7
-    translations:
-      button:
-        buttonText: '搜索'
-        buttonAriaLabel: '搜索'
-      modal:
-        searchBox:
-          resetButtonTitle: '清空'
-          resetButtonAriaLabel: '清空'
-          cancelButtonText: '取消'
-          cancelButtonAriaLabel: '取消'
-        startScreen:
-          recentSearchesTitle: '最近搜索历史'
-          noRecentSearchesText: '搜索历史为空'
-          saveRecentSearchButtonTitle: '保存搜索记录'
-          removeRecentSearchButtonTitle: '清除搜索记录'
-          favoriteSearchesTitle: '收藏夹'
-          removeFavoriteSearchButtonTitle: '移出收藏夹'
-        errorScreen:
-          titleText: '未能获取搜索结果'
-          helpText: '您可能需要检查您的网络连接'
-        footer:
-          selectText: '选择'
-          selectKeyAriaLabel: '回车键'
-          navigateText: '切换'
-          navigateUpKeyAriaLabel: '方向键上'
-          navigateDownKeyAriaLabel: '方向键下'
-          closeText: '关闭'
-          closeKeyAriaLabel: '退出键'
-          searchByText: '搜索服务提供: DocSearch by'
-        noResultsScreen:
-          noResultsText: '未搜索到相关内容'
-          suggestedQueryText: '您可尝试搜索'
-          reportMissingResultsText: '确认搜索结果是正确的？'
-          reportMissingResultsLinkText: '反馈给Algolia'
 
 # Local search
 local_search:
@@ -628,15 +592,15 @@ footer:
       # - link: https://beian.miit.gov.cn/
       #   text: 湘ICP备-xxxxxxx号
     subTitle:
-      enable: true
+      enable: false
       # Typewriter Effect (打字效果)
-      effect: true
+      effect: false
       # Effect Speed Options (打字效果速度参数)
       startDelay: 300 # time before typing starts in milliseconds
       typeSpeed: 150 # type speed in milliseconds
       backSpeed: 50 # backspacing speed in milliseconds
       # loop (循环打字)
-      loop: true
+      loop: false
       # source 调用第三方服务
       # source: false 关闭调用
       # source: 1  调用一言网的一句话（简体） https://hitokoto.cn/
@@ -646,7 +610,7 @@ footer:
       source: 1
       # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
       sub:
-        - 生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.
+        # - 生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.
 
 # Analysis
 # --------------------------------------
@@ -723,19 +687,20 @@ theme_color:
   scrollbar_color: "var(--anzhiyu-scrollbar)"
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
-  inside_sidebar_background: "#111111" # @since 1.5.4 支持手机端侧边栏可定制颜色
+
 
 # h2标题上的分割线
 h2Divider: true
 
-# 移动端侧栏 @since 1.5.4
+# 移动端侧栏
 sidebar:
-  avatar: true
-  archive: true
-  tag: true
-  category: true
+  site_data:
+    archive: true
+    tag: true
+    category: true
   menus_items: true
   tags_cloud: true
+  display_mode: true
   nav_menu_project: true
 
 # 表格隔行变色
@@ -955,7 +920,7 @@ runtimeshow:
   enable: true
   publish_date: 2020/07/18 00:00:00
 
-# Aside widget - Newest Comments
+# Console - Newest Comments
 newest_comments:
   enable: true
   sort_order: # Don't modify the setting unless you know how it works
@@ -1200,8 +1165,6 @@ comment_barrage_config:
   accessToken: "24abc38bb05941a9830b8495c2db7637"
   # 博主邮箱md5值
   mailMd5: "CC9A3999333A6826AFEAF269B1C49D06"
-  # 添加博主友链的评论自定义格式
-  addFriendPlaceholder: "站点名称：\n网站地址：\n头像地址：\n站点描述：\n站点截图（可选）：\n"
 
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
@@ -1288,7 +1251,7 @@ linkPageTop:
   addFriendPlaceholder: "站点名称：\n网站地址：\n头像地址：\n站点描述：\n站点截图（可选）：\n"
 
 # 缩略图后缀 archive/tag/category 页面单独开启后缀
-pageThumbnailSuffix: ''
+pageThumbnailSuffix: ""
 
 # 隐私协议弹窗
 agreementPopup:
@@ -1298,6 +1261,13 @@ agreementPopup:
 # 右键菜单
 rightClickMenu:
   enable: false
+
+# 动效
+dynamicEffect:
+  postTopWave: true # 文章顶部波浪效果
+  postTopRollZoomInfo: true # 文章顶部滚动时缩放
+  pageCommentsRollZoom: false # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
+
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
