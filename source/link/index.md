@@ -47,7 +47,7 @@ label:  # 内容标签 可选
 {% note success simple %}此填写示例为我的站点信息，欢迎大家进行添加{% endnote %}
 ```yaml
 name: AlphaDog # 站点名称
-link: https://blog.junpengzhou.com/ # 站点地址
+link: https://blog.junpengzhou.top/ # 站点地址
 avatar: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/avatar.png # 头像链接
 descr: 全栈软件架构师 # 站点描述
 siteshot: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/junpengzhou%E7%AB%99%E7%82%B9%E6%88%AA%E5%9B%BE-snapshot.jpg # 站点截图 可选
