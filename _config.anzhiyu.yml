@@ -4,12 +4,6 @@ menu:
     分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
 
-  友链:
-    友情链接: /link/ || anzhiyu-icon-link
-    博客快讯: /fcircle/ || anzhiyu-icon-artstation
-    博客鱼塘: /fishpound/ || anzhiyu-icon-fish
-    留言板: /comments/ || anzhiyu-icon-envelope
-
   分享:
     番剧分享: /bangumis/ || anzhiyu-icon-bilibili
     读书分享: /books/ || anzhiyu-icon-book
@@ -17,6 +11,12 @@ menu:
     游戏分享: /games/ || anzhiyu-icon-dice
     音乐分享: /songs/ || anzhiyu-icon-music
     好物分享: /equipment/ || anzhiyu-icon-dice-d20
+
+  友链:
+    友情链接: /link/ || anzhiyu-icon-link
+    博客快讯: /fcircle/ || anzhiyu-icon-artstation
+    博客鱼塘: /fishpound/ || anzhiyu-icon-fish
+    留言板: /comments/ || anzhiyu-icon-envelope
 
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane
