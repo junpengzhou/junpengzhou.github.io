@@ -22,19 +22,26 @@
     # list:
       # - time: 时间/时间段
       # - desc: 描述
+      # - color: 颜色，默认为#357ef5
     list:
       - time: 2014 ~ 2018
-        desc: 江苏大学通信工程
+        desc: 2014 ~ 2018, 江苏大学通信工程
+        color: "#357ef5"
       - time: 2016 ~ 2017
-        desc: 实习前端开发工程师
+        desc: 2016 ~ 2017, 实习前端开发工程师
+        color: "#357ef5"
       - time: 2016 ~ 2017
-        desc: JAVA开发工程师
+        desc: 2016 ~ 2017, JAVA开发工程师
+        color: "#357ef5"
       - time: 2017 ~ 2018
-        desc: 实验室安卓开发工程师
+        desc: 2017 ~ 2018, 实验室安卓开发工程师
+        color: "#357ef5"
       - time: 2018 ~ 2023
-        desc: JAVA后端开发工程师&研发经理
+        desc: 2018 ~ 2023, JAVA后端开发工程师&研发经理
+        color: "#357ef5"
       - time: 2023 ~ 2023
-        desc: 技术架构师&项目经理
+        desc: 2023 ~ 2023, 技术架构师&项目经理
+        color: "#357ef5"
     item:
       - 2014 ~ 2018 通信工程
       - 2016 ~ 2017 实习前端开发工程师
@@ -117,4 +124,4 @@
       amount: 0.01
       datatime: 2022-08-19
 
-  extra: false
+  extra: true
