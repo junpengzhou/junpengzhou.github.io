@@ -70,6 +70,8 @@ jobs:
           pnpm run spider
           pnpm run build
           pnpm run algolia
+      - name: Compress static resource
+        run: |
           gulp
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

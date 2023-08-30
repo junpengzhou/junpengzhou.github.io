@@ -95,7 +95,10 @@ gulp.task('minify-images', gulp.series(
           imagemin.optipng({ optimizationLevel: 7 }),
           imagemin.svgo()
         ],
-        { verbose: true }
+        { 
+          verbose: false, 
+          silent: true 
+        }
       )
     )
     .pipe(gulp.dest('./public/img'))
