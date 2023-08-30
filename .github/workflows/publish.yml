@@ -80,7 +80,7 @@ jobs:
       # - name: Deploy to Server # 部署到自己的服务器上！
       #   uses: easingthemes/ssh-deploy@v2
       #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} 
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       #     ARGS: "-rltgoDzvO --delete"
       #     EXCLUDE: ".well-known"
       #     SOURCE: "./public/*"
