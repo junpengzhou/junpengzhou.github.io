@@ -1,6 +1,6 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.7.0",
   "private": true,
   "scripts": {
     "update": "git pull && git submodule update --remote",
@@ -12,10 +12,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.0.0-rc2"
   },
   "dependencies": {
-    "hexo": "^6.3.0",
+    "hexo": "7.0.0-rc2",
     "hexo-abbrlink": "^2.2.1",
     "hexo-algoliasearch": "^1.0.0",
     "hexo-bilibili-bangumi": "^1.8.8",
@@ -36,5 +36,14 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-terser": "^2.1.0"
   }
 }

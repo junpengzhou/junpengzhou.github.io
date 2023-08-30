@@ -52,6 +52,7 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
       - name: Cache PNPM dependencies
+        id: cache-pnpm
         uses: actions/cache@v3
         with:
           path: ${{ env.STORE_PATH }}
@@ -59,13 +60,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
-        run: pnpm install
+        if: ${{ steps.cache-pnpm.outputs.cache-hit != 'true' }}
+        run: |
+          pnpm install
+          pnpm install --global gulp-cli
       - name: Build Dist and Index
         run: |
           pnpm run clean
           pnpm run spider
           pnpm run build
           pnpm run algolia
+          gulp
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -83,3 +88,14 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      # - name: Deploy to Server # 部署到自己的服务器上！
+      #   uses: easingthemes/ssh-deploy@v2
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     ARGS: "-rltgoDzvO --delete"
+      #     EXCLUDE: ".well-known"
+      #     SOURCE: "./public/*"
+      #     REMOTE_HOST: ${{ secrets.SERVER_IP }}
+      #     REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+      #     REMOTE_USER: "你的用户名"
+      #     TARGET: "你的服务器绝对路径"
