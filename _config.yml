@@ -142,6 +142,7 @@ live2d:
     scale: 0.5
   react:
     opacity: 1.0
+# nofollow插件能够给所有非本站的超链接加上nofollow标签，防止seo权重流失
 nofollow:
   enable: true
   field: site
@@ -149,6 +150,12 @@ nofollow:
     - 'junpengzhou.xyz'
     - 'junpengzhou.cn'
     - 'junpengzhou.top'
+    - 'blog.junpengzhou.top'
+    - 'www.junpengzhou.top'
+    - 'junpengzhou.github.io'
+    - 'jpzhou-vercel.vercel.app'
+    - 'jpzhou-vercel-jpzhou007.vercel.app'
+
 # https://github.com/HCLonely/hexo-bilibili-bangumi
 bangumi: # 追番设置
   enable: true
