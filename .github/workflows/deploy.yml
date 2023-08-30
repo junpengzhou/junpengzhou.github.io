@@ -1,9 +1,7 @@
 name: Deploy To Other Platform!
 
 on:
-  push:
-    branches:
-      - gh-pages
+  page_build
 
 jobs:
   pages:
@@ -13,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+            ref: gh-pages
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
         with:
