@@ -155,6 +155,11 @@ nofollow:
     - 'junpengzhou.github.io'
     - 'jpzhou-vercel.vercel.app'
     - 'jpzhou-vercel-jpzhou007.vercel.app'
+# 自动生成sitemap和baidusitemap生成
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # https://github.com/HCLonely/hexo-bilibili-bangumi
 bangumi: # 追番设置
