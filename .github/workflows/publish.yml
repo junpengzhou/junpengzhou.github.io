@@ -1,4 +1,4 @@
-name: npm publish
+name: Github Build and Publish
 
 on:
   schedule:
@@ -65,26 +65,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-      - name: Deploy to Vercel
-        run: |
-          prodRun=""
-          if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
-            prodRun="--prod"
-          fi
-
-          pnpx vercel --token ${VERCEL_TOKEN} $prodRun
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      # - name: Deploy to Server # 部署到自己的服务器上！
-      #   uses: easingthemes/ssh-deploy@v2
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     ARGS: "-rltgoDzvO --delete"
-      #     EXCLUDE: ".well-known"
-      #     SOURCE: "./public/*"
-      #     REMOTE_HOST: ${{ secrets.SERVER_IP }}
-      #     REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-      #     REMOTE_USER: "你的用户名"
-      #     TARGET: "你的服务器绝对路径"
+   
