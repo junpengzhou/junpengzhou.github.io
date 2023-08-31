@@ -106,18 +106,20 @@ theme: anzhiyu
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: 'git'
-    repo:
-      # github:
-      #     url: https://github.com/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
-      #     branch: gh-pages # GitHub Pages的分支
-      #     token: '修改成我发布的accessToken'
-      coding:
-          url: https://git.coding.net/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
-          branch: gh-pages # GitHub Pages的分支
-          token: '修改成我发布的accessToken'
-    name: 'junpengzhou'
-    email: 'jeepzhou11@163.com'
+  - type: 'baidu_url_submitter' # 百度搜索引擎站点提交器，执行hexo deploy时候进行执行
+  # - type: 'git'
+  #   repo:
+  #     github:
+  #         url: https://github.com/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
+  #         branch: gh-pages # GitHub Pages的分支
+  #         token: '修改成我发布的accessToken'
+  #     coding:
+  #         url: https://git.coding.net/junpengzhou/junpengzhou.github.io.git # GitHub Pages 的https
+  #         branch: gh-pages # GitHub Pages的分支
+  #         token: '修改成我发布的accessToken'
+  #   name: 'junpengzhou'
+  #   email: 'jeepzhou11@163.com'
+
 
 # Plugins
 # https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md
