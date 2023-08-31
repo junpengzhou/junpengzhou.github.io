@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-            ref: gh-pages
+          ref: gh-pages
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
         with:
@@ -22,20 +22,21 @@ jobs:
         run: npm install --global vercel@latest
       - name: Deploy to Vercel
         run: |
-            vercel --token ${VERCEL_TOKEN} --prod
+          vercel --token ${VERCEL_TOKEN} --prod
         env:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        # - name: Deploy to Server # 部署到自己的服务器上！
-        #   uses: easingthemes/ssh-deploy@v2
-        #   env:
-        #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        #     ARGS: "-rltgoDzvO --delete"
-        #     EXCLUDE: ".well-known"
-        #     SOURCE: "./public/*"
-        #     REMOTE_HOST: ${{ secrets.SERVER_IP }}
-        #     REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-        #     REMOTE_USER: "你的用户名"
-        #     TARGET: "你的服务器绝对路径"
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      - name: Deploy to Server
+        if: false
+        uses: actions/checkout@v3
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          EXCLUDE: ".well-known"
+          SOURCE: "./public/*"
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          REMOTE_USER: "root"
+          TARGET: "/home/application"
     
