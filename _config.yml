@@ -162,7 +162,7 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-baidu_site_verification: codeva-4bOPbFwZfg
+
 
 # https://github.com/HCLonely/hexo-bilibili-bangumi
 bangumi: # 追番设置

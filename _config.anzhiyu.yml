@@ -657,9 +657,9 @@ google_adsense:
 
 site_verification:
   - name: google-site-verification
-    content: xxx
+    content: sW9184Qb84fbHTjaHMPEyw8qv4GpWmI2gD-tTp_s
   - name: baidu-site-verification
-    content: code-xxx
+    content: codeva-4bOPbFwZfg
   - name: msvalidate.01
     content: xxx
 
