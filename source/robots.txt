@@ -11,5 +11,5 @@ Disallow: /anzhiyu/
 Disallow: /support/
 Disallow: /fcircle/
 
-Sitemap: https://blog.junpengzhou.top/sitemap.xml
-Sitemap: https://blog.junpengzhou.top/baidusitemap.xml
+Sitemap: https://www.junpengzhou.top/sitemap.xml
+Sitemap: https://www.junpengzhou.top/baidusitemap.xml

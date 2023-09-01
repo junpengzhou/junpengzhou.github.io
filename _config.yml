@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: 'https://blog.junpengzhou.top'
+url: 'https://www.junpengzhou.top'
 # permalink: ':year/:month/:day/:title/' # 原有的方式配置，改了标题名或日期时候原有链接会出现失效，所以做此优化
 permalink: article/:abbrlink.html # article是自定义前缀
 abbrlink:
@@ -162,7 +162,23 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-
+# 自动推送到各个搜索平台
+# enable: 开启/关闭 推送
+# cron: 执行时间周期
+# count: 每次提交最新的10篇文章，输入0或者不填写则默认为所有文章(建议是最新的10篇文章)
+# date: 更新时间(updated)|创建日期(created)
+# https://github.com/Lete114/hexo-seo-autopush.git
+hexo_seo_integrated_submit:
+  generate_workflow_file: true
+  date: created
+  count: 10
+  cron: 0 4 * * *
+  baidu:
+    enable: true
+  bing:
+    enable: true
+  google:
+    enable: true
 
 # https://github.com/HCLonely/hexo-bilibili-bangumi
 bangumi: # 追番设置
