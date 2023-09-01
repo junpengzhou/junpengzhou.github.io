@@ -69,8 +69,8 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0
   hexo-seo-integrated-submit:
-    specifier: ^1.1.1
-    version: 1.1.1
+    specifier: ^1.1.2
+    version: 1.1.2
   hexo-server:
     specifier: ^3.0.0
     version: 3.0.0
@@ -3946,8 +3946,8 @@ packages:
       - supports-color
     dev: false
 
-  /hexo-seo-integrated-submit@1.1.1:
-    resolution: {integrity: sha512-37KYnL1JNAuAE0v7H3WuP2QiTMhenHjFi0ALi/uq4m4Br7XBkn7faGhP365tmvqem6GSvhcMdhqwSTo6l0Lx/A==}
+  /hexo-seo-integrated-submit@1.1.2:
+    resolution: {integrity: sha512-XWuLkZNjIDYYrVuXgXq4kEeOkrCy8MsnuOlb03cG6p4Vy1c0vqvQ9W8O7VrE81kRlLw2TfeYlM8gdnrjgGRcew==}
     hasBin: true
     dependencies:
       axios: 1.5.0
