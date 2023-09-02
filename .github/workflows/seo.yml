@@ -1,19 +1,21 @@
 
-name: Hexo SEO Auto Push
+name: hexo seo integrated submit
 
 on:
   schedule:
     - cron: 0 4 * * *
   watch:
     types: [started]
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     steps:
-
       - name: 1. Checkout the code
         uses: actions/checkout@v3
+        with:
+          ref: gh-pages
 
       - name: 2. Install Node Environment
         uses: actions/setup-node@v3
