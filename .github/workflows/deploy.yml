@@ -1,6 +1,7 @@
 name: Deploy To Other Platform!
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: [Github Build and Publish]
     types: 

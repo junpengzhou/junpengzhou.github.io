@@ -1,6 +1,7 @@
 name: Github Build and Publish
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 16,4 * * *' # every day at midnight and noon（Use UTC time,China Standard Time is UTC:+8:00）
   push:
