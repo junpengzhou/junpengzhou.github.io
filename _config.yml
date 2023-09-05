@@ -162,12 +162,12 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-# 自动推送到各个搜索平台
+# 集成推送到各个搜索引擎平台（谷歌、必应、百度）
 # enable: 开启/关闭 推送
 # cron: 执行时间周期
 # count: 每次提交最新的10篇文章，输入0或者不填写则默认为所有文章(建议是最新的10篇文章)
 # date: 更新时间(updated)|创建日期(created)
-# https://github.com/Lete114/hexo-seo-autopush.git
+# https://github.com/junpengzhou/hexo-seo-integrated-submit
 hexo_seo_integrated_submit:
   generate_workflow_file: true
   date: created
