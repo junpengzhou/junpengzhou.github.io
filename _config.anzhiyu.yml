@@ -78,6 +78,8 @@ author_status:
   enable: true
   status: ✍️
   alias: writing_hand
+  # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
+  statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   fallback_src: https://github.githubassets.com/images/icons/emoji/unicode/270d.png
   text: on Studying
   skills:
@@ -300,9 +302,11 @@ related_post:
 photofigcaption: false
 
 # post_pagination (分页)
-# value: 1 || 2 || false
+# value: 1 || 2 || 3 || 4 || false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
+# 3: 只有下一篇，并且只在文章滚动到评论区时显示下一篇文章(旧文章)
+# 4: 只有下一篇，并且只在文章滚动到评论区时显示下一篇文章(旧文章) 显示图片cover
 # false: disable pagination
 post_pagination: 2
 
@@ -688,10 +692,6 @@ theme_color:
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
 
-
-# h2标题上的分割线
-h2Divider: true
-
 # 移动端侧栏
 sidebar:
   site_data:
@@ -703,6 +703,8 @@ sidebar:
   display_mode: true
   nav_menu_project: true
 
+# h2标题上的分割线
+h2Divider: true
 # 表格隔行变色
 table_interlaced_discoloration: false
 
@@ -1262,10 +1264,15 @@ agreementPopup:
 rightClickMenu:
   enable: false
 
+# 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
+peoplecanvas:
+  enable: false
+  img: https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png
+
 # 动效
 dynamicEffect:
   postTopWave: true # 文章顶部波浪效果
-  postTopRollZoomInfo: true # 文章顶部滚动时缩放
+  postTopRollZoomInfo: false # 文章顶部滚动时缩放
   pageCommentsRollZoom: false # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
 
 # Inject
