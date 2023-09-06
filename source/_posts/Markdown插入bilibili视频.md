@@ -42,4 +42,7 @@ date: 2023-08-23 15:24:47
 ![image-20230823155801529](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230823155801529.png)
 # 二、效果示例
 
-<iframe src="//player.bilibili.com/player.html?aid=500715827&bvid=BV1CK411u75G&cid=269252712&page=2&high_quality=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts" width="100%" height="600"></iframe>
+<div class="aspect-ratio" style="text-align: center;">
+  <iframe src="//player.bilibili.com/player.html?aid=500715827&bvid=BV1CK411u75G&cid=269252712&page=2&high_quality=1&danmaku=0&autoplay=0" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts">
+  </iframe>
+</div>
