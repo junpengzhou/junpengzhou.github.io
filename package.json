@@ -18,7 +18,7 @@
     "hexo": "7.0.0-rc2",
     "hexo-abbrlink": "^2.2.1",
     "hexo-algoliasearch": "^1.0.0",
-    "hexo-bilibili-bangumi": "^1.8.8",
+    "hexo-bilibili-bangumi": "^1.8.9",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-deployer-git": "^4.0.0",
     "hexo-douban": "^2.2.3",

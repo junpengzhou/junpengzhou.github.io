@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.0.0
     version: 1.0.0
   hexo-bilibili-bangumi:
-    specifier: ^1.8.8
-    version: 1.8.8
+    specifier: ^1.8.9
+    version: 1.8.9
   hexo-butterfly-envelope:
     specifier: ^1.0.15
     version: 1.0.15
@@ -3694,8 +3694,8 @@ packages:
       striptags: 3.1.1
     dev: false
 
-  /hexo-bilibili-bangumi@1.8.8:
-    resolution: {integrity: sha512-XaWV0Iq0JkJgRUKGsXG4xnyR5dYEbANbHfSUXiD8AWQYY9RN/JznGncb/FXxFGPyJwu+gqoq1Y6Sre7QlIBD4w==}
+  /hexo-bilibili-bangumi@1.8.9:
+    resolution: {integrity: sha512-sn/IO5jE4DDnFoN56sp7Yup36H2GPsHslZQTSWl7ROJnwLfgkKHtHfO/A7yd1H//s39kuXZcAEP/x/EjJ9yHWw==}
     dependencies:
       '@babel/runtime': 7.22.11
       axios: 1.5.0
