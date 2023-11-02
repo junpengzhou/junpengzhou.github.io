@@ -4,8 +4,6 @@ let htmlmin = require('gulp-html-minifier-terser');
 let htmlclean = require('gulp-htmlclean');
 let fontmin = require('gulp-fontmin');
 let terser = require('gulp-terser');
-// 图片压缩
-let imagemin
 
 // 压缩js
 gulp.task('minify-js', async() =>{
@@ -75,33 +73,4 @@ gulp.task('mini-font', (cb) => {
     })
 })
 
-/* 
- * 压缩图片
- *
- * 错误记录：Error [ERR_REQUIRE_ESM]: require() of ES Module E:\02-Code\GITHUB-GIT\junpengzhou.github.io\node_modules\.pnpm\gulp-imagemin@8.0.0_gulp@4.0.2\node_modules\gulp-imagemin\index.js from E:\02-Code\GITHUB-GIT\junpengzhou.github.io\gulpfile.js not supported.
- * Instead change the require of index.js in E:\02-Code\GITHUB-GIT\junpengzhou.github.io\gulpfile.js to a dynamic import() which is available in all CommonJS modules. 、
- */
-gulp.task('minify-images', gulp.series(
-  async () => {
-    imagemin = await import('gulp-imagemin');
-  },
-  () => gulp
-    .src('./public/img/**/*')
-    .pipe(
-      imagemin.default(
-        [
-          imagemin.gifsicle({ optimizationLevel: 3 }),
-          imagemin.mozjpeg({ progressive: true }),
-          imagemin.optipng({ optimizationLevel: 7 }),
-          imagemin.svgo()
-        ],
-        { 
-          verbose: false, 
-          silent: true 
-        }
-      )
-    )
-    .pipe(gulp.dest('./public/img'))
-))
-
-gulp.task('default', gulp.series('minify-html', 'minify-css', 'minify-js', 'minify-images'))
+gulp.task('default', gulp.series('minify-html', 'minify-css', 'minify-js'))
