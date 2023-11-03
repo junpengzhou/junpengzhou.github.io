@@ -24,8 +24,8 @@ dependencies:
     specifier: ^4.0.0
     version: 4.0.0
   hexo-douban:
-    specifier: ^2.2.3
-    version: 2.2.3
+    specifier: ^2.2.6
+    version: 2.2.6
   hexo-filter-mathjax:
     specifier: ^0.9.0
     version: 0.9.0
@@ -3095,8 +3095,8 @@ packages:
       - chokidar
     dev: false
 
-  /hexo-douban@2.2.3:
-    resolution: {integrity: sha512-f2wt7UEh4Cve+cFFWng5B8QXuKLN8G4hFFhRsWxutu5r3yfIR1JMwVUzVBO8iIY2bidzmnyblX18On6dsz0LYw==}
+  /hexo-douban@2.2.6:
+    resolution: {integrity: sha512-8E2npvFNT5o5G/cAlVS8oABU+uArE/bOTsXgxO56L8bNA/ZQUbZkl45duR4GMpM4Tt7bWrnhvyWYx1wtd+x2aw==}
     dependencies:
       diagnostics_channel: 1.1.0
       ejs: 3.1.7
