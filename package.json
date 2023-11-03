@@ -15,7 +15,7 @@
     "version": "7.0.0-rc2"
   },
   "dependencies": {
-    "hexo": "7.0.0-rc2",
+    "hexo": "7.0.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-algoliasearch": "^1.0.0",
     "hexo-bilibili-bangumi": "^1.8.9",
