@@ -21,7 +21,7 @@ jobs:
       - name: 2. Install Node Environment
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
 
       - name: 3. Install the Plugin of 
         run: |
