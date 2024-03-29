@@ -41,7 +41,7 @@
     "hexo-wordcount": "^6.0.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-fontmin": "^0.7.4",
     "gulp-html-minifier-terser": "^7.1.0",
