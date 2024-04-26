@@ -119,15 +119,6 @@
   </url>
   
   <url>
-    <loc>https://www.junpengzhou.top/categories/index.html</loc>
-    
-    <lastmod>2024-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.junpengzhou.top/about/index.html</loc>
     
     <lastmod>2024-04-26</lastmod>
@@ -147,6 +138,15 @@
   
   <url>
     <loc>https://www.junpengzhou.top/essay/index.html</loc>
+    
+    <lastmod>2024-04-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.junpengzhou.top/categories/index.html</loc>
     
     <lastmod>2024-04-26</lastmod>
     
