@@ -15,8 +15,8 @@ dependencies:
     specifier: ^2.0.1
     version: 2.0.1
   hexo-bilibili-bangumi:
-    specifier: ^1.8.9
-    version: 1.8.9
+    specifier: ^1.9.0
+    version: 1.9.0
   hexo-butterfly-envelope:
     specifier: ^1.0.15
     version: 1.0.15
@@ -1934,6 +1934,14 @@ packages:
     requiresBuild: true
     dev: false
 
+  /ejs@3.1.10:
+    resolution: {integrity: sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA==}
+    engines: {node: '>=0.10.0'}
+    hasBin: true
+    dependencies:
+      jake: 10.8.7
+    dev: false
+
   /ejs@3.1.7:
     resolution: {integrity: sha512-BIar7R6abbUxDA3bfXrO4DSgwo8I+fB5/1zgujl3HLLjwd6+9iOnrT+t3grn2qbk9vOgBubXOFwX2m9axoFaGw==}
     engines: {node: '>=0.10.0'}
@@ -3010,14 +3018,14 @@ packages:
       striptags: 3.2.0
     dev: false
 
-  /hexo-bilibili-bangumi@1.8.9:
-    resolution: {integrity: sha512-sn/IO5jE4DDnFoN56sp7Yup36H2GPsHslZQTSWl7ROJnwLfgkKHtHfO/A7yd1H//s39kuXZcAEP/x/EjJ9yHWw==}
+  /hexo-bilibili-bangumi@1.9.0:
+    resolution: {integrity: sha512-ZzwFu3hlUlXLmLTjS9scd86n6oM7jisLK/FaWy57chnKgLPu44Yp1hTHZ5ALbFPnG+h52RYw+J1aU91NG4eITw==}
     dependencies:
       '@babel/runtime': 7.22.11
       axios: 1.5.0
       bangumi-data: 0.3.119
       cheerio: 1.0.0-rc.12
-      ejs: 3.1.9
+      ejs: 3.1.10
       hexo-fs: 4.1.1
       hexo-i18n: 2.0.0
       hexo-log: 4.1.0
