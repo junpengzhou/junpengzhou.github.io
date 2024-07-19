@@ -1338,13 +1338,13 @@ CDN:
     # ai_abstract_js:
     # local_search:
     # algolia_js:
-    algolia_search: https://cdn.staticfile.org/algoliasearch/4.19.1/algoliasearch.umd.min.js
-    instantsearch_v4: https://npm.elemecdn.com/instantsearch.js@4.46.1/dist/instantsearch.production.min.js
-    instantsearch: https://npm.elemecdn.com/instantsearch.js@4.46.1/dist/instantsearch.production.min.js
+    # algolia_search: https://cdn.staticfile.org/algoliasearch/4.19.1/algoliasearch.umd.min.js
+    instantsearch_v4: https://npm.elemecdn.com/instantsearch.js@latest/dist/instantsearch.production.min.js
+    instantsearch: https://npm.elemecdn.com/instantsearch.js@latest/dist/instantsearch.production.min.js
     pjax: https://npm.elemecdn.com/pjax@latest/pjax.min.js
     # blueimp_md5:
     # valine:
-    twikoo: https://cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js
+    # twikoo: https://cdn.staticfile.org/twikoo/1.6.17/twikoo.all.min.js
     # waline_js:
     # waline_css:
     # sharejs:
@@ -1356,15 +1356,15 @@ CDN:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    lazyload: https://npm.elemecdn.com/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js
-    instantpage: https://cdn.staticfile.org/instant.page/5.2.0/instantpage.min.js
+    # lazyload: https://npm.elemecdn.com/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js
+    # instantpage: https://cdn.staticfile.org/instant.page/5.2.0/instantpage.min.js
     # typed:
     pangu: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/pangu/4.0.7/pangu.min.js
-    fancybox_css: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.css
-    fancybox: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.umd.js
+    #fancybox_css: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.css
+    # fancybox: https://cdn.staticfile.org/fancyapps-ui/5.0.22/fancybox/fancybox.umd.js
     # medium_zoom:
-    snackbar_css: https://npm.elemecdn.com/node-snackbar@latest/dist/snackbar.min.css
-    snackbar: https://npm.elemecdn.com/node-snackbar@latest/dist/snackbar.min.js
+    # snackbar_css: https://npm.elemecdn.com/node-snackbar@latest/dist/snackbar.min.css
+    # snackbar: https://npm.elemecdn.com/node-snackbar@latest/dist/snackbar.min.js
     # activate_power_mode:
     # fireworks:
     # click_heart:
@@ -1385,7 +1385,7 @@ CDN:
     # pace_default_css:
     # countup_js:
     # gsap_js:
-    busuanzi: https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.js
+    # busuanzi: https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.js
     # rightmenu:
     # waterfall:
     # ali_iconfont_css: https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css
