@@ -21,7 +21,7 @@
     "hexo-bilibili-bangumi": "^1.8.9",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-deployer-git": "^4.0.0",
-    "hexo-douban": "^2.2.6",
+    "hexo-douban": "^2.3.6",
     "hexo-filter-mathjax": "^0.9.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-generator-archive": "^2.0.0",
