@@ -18,8 +18,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       hexo-bilibili-bangumi:
-        specifier: ^1.9.0
-        version: 1.9.0
+        specifier: ^1.10.1
+        version: 1.10.1
       hexo-butterfly-envelope:
         specifier: ^1.0.15
         version: 1.0.15
@@ -167,10 +167,6 @@ packages:
     resolution: {integrity: sha512-3l6+4YOvc9wx7VlCSw4yQfcBo01ECA8TicQfbnCPuCEpRQrf+gTUyGdxNw+pyTUyywp6JRD1w0YQs9TpBXYlkw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-
-  '@babel/runtime@7.22.11':
-    resolution: {integrity: sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.24.7':
     resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
@@ -1623,8 +1619,8 @@ packages:
     resolution: {integrity: sha512-QbzB6M/ZByidBeeNyhTMC7zMl8BddG+ovobO6VjK7HufUW2iHSLZYG93gi3Fri2xji0mTn6c80Q6G60U1ILq+Q==}
     engines: {node: '>=18'}
 
-  hexo-bilibili-bangumi@1.9.0:
-    resolution: {integrity: sha512-ZzwFu3hlUlXLmLTjS9scd86n6oM7jisLK/FaWy57chnKgLPu44Yp1hTHZ5ALbFPnG+h52RYw+J1aU91NG4eITw==}
+  hexo-bilibili-bangumi@1.10.1:
+    resolution: {integrity: sha512-GeKnVsJussCl4q11vdYsH+Rn852kUCYdaB/3FXAzV3EHjLHGac/LuLtBmztX/7l+SK4VeTqaRWtJJLClTcNaSg==}
 
   hexo-bunyan@1.0.0:
     resolution: {integrity: sha512-RymT8Ck+K77mLt9BEYNb4uyfC7RIQnU5N3laXowMrS28jj2h89VHJCOnhV00mmta4fHRqNa07kP1Hrn17nvMkQ==}
@@ -4150,10 +4146,6 @@ snapshots:
     dependencies:
       '@babel/types': 7.22.11
 
-  '@babel/runtime@7.22.11':
-    dependencies:
-      regenerator-runtime: 0.14.0
-
   '@babel/runtime@7.24.7':
     dependencies:
       regenerator-runtime: 0.14.0
@@ -5844,14 +5836,14 @@ snapshots:
       algoliasearch: 4.20.0
       striptags: 3.2.0
 
-  hexo-bilibili-bangumi@1.9.0:
+  hexo-bilibili-bangumi@1.10.1:
     dependencies:
-      '@babel/runtime': 7.22.11
+      '@babel/runtime': 7.24.7
       axios: 1.5.0
       bangumi-data: 0.3.119
       cheerio: 1.0.0-rc.12
       ejs: 3.1.10
-      hexo-fs: 4.1.1
+      hexo-fs: 4.1.3
       hexo-i18n: 2.0.0
       hexo-log: 4.1.0
       progress: 2.0.3
