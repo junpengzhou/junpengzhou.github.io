@@ -10,6 +10,7 @@ Disallow: /fancybox/
 Disallow: /anzhiyu/
 Disallow: /support/
 Disallow: /fcircle/
+Disallow: /itv/
 
 Sitemap: https://www.junpengzhou.top/sitemap.xml
 Sitemap: https://www.junpengzhou.top/baidusitemap.xml
