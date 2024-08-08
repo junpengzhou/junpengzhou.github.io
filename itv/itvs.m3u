@@ -8,9 +8,9 @@ http://183.185.219.170:9999/tsfile/live/0003_1.m3u8
 #EXTINF:-1 group-title="央视台" tvg-id="CCTV-4中文国际" tvg-logo="https://live.fanmingming.com/tv/CCTV4.png",CCTV-4中文国际
 http://119.164.84.109:9901/tsfile/live/0004_1.m3u8
 #EXTINF:-1 group-title="央视台" tvg-id="CCTV-5体育" tvg-logo="https://live.fanmingming.com/tv/CCTV5.png",CCTV-5体育
-http://116.162.6.192/61.v.smtcdns.net/zycfcdn.gdwlcloud.com/PLTV/88888888/224/3221225489/index.m3u8
+https://node1.olelive.com:6443/live/CCTV5HD/hls.m3u8
 #EXTINF:-1 group-title="央视台" tvg-id="CCTV-5+体育赛事" tvg-logo="https://live.fanmingming.com/tv/CCTV5+.png",CCTV-5+体育赛事
-http://116.162.6.192/61.v.smtcdns.net/zycfcdn.gdwlcloud.com/PLTV/88888888/224/3221225494/index.m3u8
+https://node1.olelive.com:6443/live/CCTV5PHD/hls.m3u8
 #EXTINF:-1 group-title="央视台" tvg-id="CCTV-6电影" tvg-logo="https://live.fanmingming.com/tv/CCTV6.png",CCTV-6电影
 http://mobilelive-ds.ysp.cctv.cn/ysp/2013693901.m3u8
 #EXTINF:-1 group-title="央视台" tvg-id="CCTV-7国防军事" tvg-logo="https://live.fanmingming.com/tv/CCTV7.png",CCTV-7国防军事
