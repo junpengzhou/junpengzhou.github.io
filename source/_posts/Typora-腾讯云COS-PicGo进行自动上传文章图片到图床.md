@@ -30,6 +30,7 @@ date: 2023-08-01 16:49:24
 3. 进入Typora ==> 文件 ==> 偏好设置 ==> 图像中设置插入图片时候的自动上传动作和指定PicGo.exe程序位置，并在完成设置后可以验证图片上传选项
 
 ![image-20230801165606337](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230801165606337.png)
+
 4. 配置完成后上传后测试（桶内会多出文件来）
 
 ![image-20230801165031976](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20230801165031976.png)
