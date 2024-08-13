@@ -14,7 +14,7 @@ date: 2024-08-13 11:15:40
 
 
 
-# 什么是Spring ?
+# 二、什么是Spring ?
 
 > Spring 是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许使用者选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring 使用基本的 JavaBean 来完成以前只可能由 EJB 完成的事情。
 
@@ -24,7 +24,7 @@ date: 2024-08-13 11:15:40
 
 ![spring-overview](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/spring-overview.png)
 
-# Spring 框架组件
+# 三、Spring 框架组件
 
 | GroupId             | ArtifactId               | Description                                                  |
 | ------------------- | ------------------------ | ------------------------------------------------------------ |
@@ -48,7 +48,7 @@ date: 2024-08-13 11:15:40
 | org.springframework | spring-webmvc            | REST Web Services and model-view-controller implementation for web applications Web 应用程序的 REST Web 服务和模型 - 视图 - 控制器实现，模块（也称为 Web-Servlet 模块）包含用于 Web 应用程序的 Spring 的模型视图控制器（MVC）和 REST Web 服务实现。 Spring 的 MVC 框架提供了 domain model（领域模型）代码和 Web 表单之间的清晰分离，并且集成了 Spring Framework 所有的其他功能 |
 | org.springframework | spring-websocket         | WebSocket and SockJS implementations, including STOMP support WebSocket 和 SockJS 实现，包括 STOMP 支持 |
 
-# 核心组件说明
+# 四、核心组件说明
 
 - **Spring Core**：Spring核心模块，主要提供 ioC 依赖注入、
 - **Spring Context**：向Spring框架提供上下文信息、
@@ -61,7 +61,7 @@ date: 2024-08-13 11:15:40
 - **Spring Aspects**：该模块为与AspectJ的集成提供支持。
 - **Spring Web**：Spring框架支持与Struts集成，为基于web的应用程序提供了上下文。
 
-# Spring的优点
+# 五、Spring的优点
 
 - **方便解耦，简化开发 （高内聚低耦合）**
 
@@ -87,7 +87,7 @@ Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀�
 
 Spring 对 JavaEE 开发中非常难用的一些 API（JDBC、JavaMail、远程调用等），都提供了封装，使这些 API 应用难度大大降低
 
-# IoC（Inversion of Control）控制反转
+# 六、IoC（Inversion of Control）控制反转
 
 了解Ioc之前，先了解一下`DI（Dependency Injection）`(依赖注入)
 
@@ -115,7 +115,7 @@ Spring 对 JavaEE 开发中非常难用的一些 API（JDBC、JavaMail、远程�
 
 详见：[Spring Ioc源码分析](https://javadoop.com/post/spring-ioc)
 
-# AOP（Aspect-OrientedProgramming）面向切面编程
+# 七、AOP（Aspect-OrientedProgramming）面向切面编程
 
 AOP（Aspect Oriented Programming 面向切面编程），在程序开发中主要用来解决一些系统层面上的问题，比如**日志收集，事务管理，权限，缓存，对象池管理**等。
 
@@ -135,9 +135,7 @@ AOP技术恰恰相反，它利用一种称为"横切"的技术，剖解开封装
 6. `切面(Aspect)`: 切入点`(Pointcut)`+通知`(Advice)`
 7. `织入(Weaving)`：把通知的动作融入到对象中，生成代理对象的过程就叫做织入。
 
-### [#](https://www.sharkchili.com/pages/e2f8e1/#spring-aop和aspectj-aop的区别知道吗)Spring AOP和AspectJ AOP的区别知道吗？
-
-## Spring AOP
+## 7.1 Spring AOP
 
 Spring AOP就是基于动态代理的，底层实现有俩种方式：一种是 **JDK 动态代理(JDK Proxy)**，另一种是 **CGLib**(Code Generation Library(基于字节码操作)) 的方式。
 
@@ -149,13 +147,13 @@ Spring AOP就是基于动态代理的，底层实现有俩种方式：一种是 
 
 当然，也可以使用 AspectJ ，AspectJ 可以做Spring AOP干不了的事情，它是 AOP 编程的完全解决方案。
 
-#### Spring AOP 和 AspectJ AOP 有什么区别？
+## 7.2 Spring AOP 和 AspectJ AOP 的区别
 
 **Spring AOP 属于运行时增强；而 AspectJ 是编译时增强**。Spring AOP 只能在运行时织入，AspectJ 运行时织入不可用，支持编译时、编译后和加载时织入。
 
 AspectJ 相比于 Spring AOP 功能更加强大，但是 Spring AOP 相对来说更简单。
 
-## AspectJ 通知类型
+## 7.3 AspectJ AOP通知类型
 
 1. `Before（前置通知）`: 目标对象方法调用前触发增强。
 2. `After （后置通知）`:目标对象方法调用后进行增强。
@@ -163,7 +161,7 @@ AspectJ 相比于 Spring AOP 功能更加强大，但是 Spring AOP 相对来说
 4. `AfterThrowing（异常通知）`:目标对象方法执行报错并抛出时做的增强。
 5. `Around(环绕通知）`:这个比较常用了，目标对象方法调用前后我们可以做各种增强操作,甚至不调用对象的方法都能做到。
 
-## 多个切面执行顺序我们如何确定
+## 7.4 多个切面执行顺序我们如何确定
 
 1. 注解法:使用`@Order`注解来决定切面`bean`的执行顺序。
 
@@ -175,7 +173,7 @@ AspectJ 相比于 Spring AOP 功能更加强大，但是 Spring AOP 相对来说
 public class LoggingAspect implements Ordered {}
 ```
 
-1. 继承接口法:`implements Ordered`接口
+2. 继承接口法:`implements Ordered`接口
 
 ```java
 @Component
@@ -190,9 +188,9 @@ public class LoggingAspect implements Ordered {
 }
 ```
 
-# Spring 的 bean
+# 八、Spring 的 bean
 
-## 作用域（Scope）
+## 8.1 作用域（Scope）
 
 | type        | 说明                                                         |
 | ----------- | ------------------------------------------------------------ |
@@ -202,7 +200,7 @@ public class LoggingAspect implements Ordered {
 | session     | 会话作用域，每次HTTP请求都会创建一个新的Bean，该作用域仅适用于WebApplicationContext环境，具体为SpringMVC下使用 |
 | application | 全局作用域，同一个HTTP Session共享一个Bean，该作用域仅适用于WebApplicationContext环境，具体为SpringMVC下使用 |
 
-## SpringBean的线程安全问题
+## 8.2 SpringBean的线程安全问题
 
 线程安全一直是代码编写的重地，我们大多时候在系统开发中不会使用多线程。单例 bean 存在线程安全问题，当多个线程操作同一个对象的时候，这个对象的非静态成员变量会存在线程安全问题。
 
@@ -211,7 +209,7 @@ public class LoggingAspect implements Ordered {
 - 在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在 ThreadLocal 中（推荐的一种方式，这也是常用一种）；
 - 在Bean对象中尽量避免定义可变的成员变量。
 
-### Spring bean 的生命周期
+## 8.3 Spring bean 的生命周期
 
 在传统的Java应用中，bean的生命周期很简单，使用Java关键字 new 进行Bean 的实例化，然后该Bean 就能够使用了。一旦bean不再被使用，则由Java自动进行垃圾回收。
 
@@ -225,7 +223,7 @@ public class LoggingAspect implements Ordered {
 - 实现InitializingBean接口并重写其afterPropertiesSet方法，实现DisposableBean接口并重写destroy方法
 - 利用java的JSR250规范中的@PostConstruct标注在init方法上，@PreDestroy标注在destroy方法上
 
-## Spring MVC
+## 8.4 Spring MVC
 
 Spring MVC 是一款很优秀的 MVC 框架。可以让我们的开发更简洁，而且它和 Spring 是无缝集成，是 Spring 的一个子模块，是我们上面提到 Spring 大家族中 Web 模块。
 
@@ -233,13 +231,13 @@ Spring MVC 框架主要由 **DispatcherServlet 、处理器映射、处理器(�
 
 ### ![SpringMVC-arch3](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/SpringMVC-arch3.png)
 
-# Spring管理事务
+# 九、Spring管理事务
 
-## 事务管理方式
+## 9.1 事务管理方式
 
 > 事务管理对于企业应用来说是至关重要的，即使出现异常情况，它也可以保证数据的一致性。
 
-1. 编程式事务，在代码中硬编码。(不推荐使用)
+1. **编程式事务，在代码中硬编码。(不推荐使用)**
 
 所谓编程式事务指的是通过编码方式实现事务，允许用户在代码中精确定义事务的边界。
 
@@ -274,7 +272,7 @@ public void testTransaction() {
 }
 ```
 
-2. 声明式事务，在配置文件中配置（推荐使用）
+2. **声明式事务，在配置文件中配置（推荐使用）**
 
 ```java
 @Transaction
@@ -288,7 +286,7 @@ public void insert(String userName){
 - 基于XML的声明式事务
 - 基于注解的声明式事务
 
-## 声明式事务注意点
+## 9.2 声明式事务注意点
 
 **@Transactional(rollbackFor = Exception.class)注解**
 
@@ -296,7 +294,7 @@ public void insert(String userName){
 
 `@Transactional`是通过SpringAOP代理增强的方式进行事务的管理与控制的，所以`@Transactional`只能**加在public方法**上，且**调用方不能是同一个类中的方法（JDK代理模式时）**
 
-## Spring管理事务原理说明
+## 9.3 Spring管理事务原理说明
 
 Spring事务的本质 其实就是 AOP 和 数据库事务，Spring 将数据库的事务操作提取为 切面，通过 aop 在方法执行前后增加数据库事务的操。
 
