@@ -529,24 +529,18 @@ footer:
         link: mailto:jeepzhou11@163.com
         icon: anzhiyu-icon-envelope
       - title: 微博
-        link: https://weibo.com/u/6378063631
+        link: https://weibo.com/u/5441665984
         icon: anzhiyu-icon-weibo
-      - title: facebook
-        link: https://www.facebook.com/profile.php?id=100092208016287&sk=about
-        icon: anzhiyu-icon-facebook1
       - title: RSS
         link: atom.xml
         icon: anzhiyu-icon-rss
     right:
       - title: Github
-        link: https://github.com/anzhiyu-c
+        link: https://github.com/junpengzhou
         icon: anzhiyu-icon-github
       - title: Bilibili
         link: https://space.bilibili.com/19265913
         icon: anzhiyu-icon-bilibili
-      - title: 抖音
-        link: https://v.douyin.com/DwCpMEy/
-        icon: anzhiyu-icon-tiktok
       - title: CC
         link: /copyright
         icon: anzhiyu-icon-copyright-line
