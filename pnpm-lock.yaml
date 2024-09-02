@@ -18,8 +18,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       hexo-bilibili-bangumi:
-        specifier: ^1.10.1
-        version: 1.10.1
+        specifier: ^1.10.6
+        version: 1.10.6
       hexo-butterfly-envelope:
         specifier: ^1.0.15
         version: 1.0.15
@@ -1619,8 +1619,8 @@ packages:
     resolution: {integrity: sha512-QbzB6M/ZByidBeeNyhTMC7zMl8BddG+ovobO6VjK7HufUW2iHSLZYG93gi3Fri2xji0mTn6c80Q6G60U1ILq+Q==}
     engines: {node: '>=18'}
 
-  hexo-bilibili-bangumi@1.10.1:
-    resolution: {integrity: sha512-GeKnVsJussCl4q11vdYsH+Rn852kUCYdaB/3FXAzV3EHjLHGac/LuLtBmztX/7l+SK4VeTqaRWtJJLClTcNaSg==}
+  hexo-bilibili-bangumi@1.10.6:
+    resolution: {integrity: sha512-KL4C5gXHVtTEQ3BwaVD4K//r5ZZCZjEM0jP2MVRA0oFrjKYlzYtfqw2b1qQlZg/pydJ9xznJucwaxVhtaoh9og==}
 
   hexo-bunyan@1.0.0:
     resolution: {integrity: sha512-RymT8Ck+K77mLt9BEYNb4uyfC7RIQnU5N3laXowMrS28jj2h89VHJCOnhV00mmta4fHRqNa07kP1Hrn17nvMkQ==}
@@ -5836,7 +5836,7 @@ snapshots:
       algoliasearch: 4.20.0
       striptags: 3.2.0
 
-  hexo-bilibili-bangumi@1.10.1:
+  hexo-bilibili-bangumi@1.10.6:
     dependencies:
       '@babel/runtime': 7.24.7
       axios: 1.5.0
