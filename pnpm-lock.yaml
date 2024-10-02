@@ -18,8 +18,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       hexo-bilibili-bangumi:
-        specifier: ^1.10.1
-        version: 1.10.1
+        specifier: ^1.10.7
+        version: 1.10.7
       hexo-butterfly-envelope:
         specifier: ^1.0.15
         version: 1.0.15
@@ -1372,7 +1372,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -1619,8 +1619,8 @@ packages:
     resolution: {integrity: sha512-QbzB6M/ZByidBeeNyhTMC7zMl8BddG+ovobO6VjK7HufUW2iHSLZYG93gi3Fri2xji0mTn6c80Q6G60U1ILq+Q==}
     engines: {node: '>=18'}
 
-  hexo-bilibili-bangumi@1.10.1:
-    resolution: {integrity: sha512-GeKnVsJussCl4q11vdYsH+Rn852kUCYdaB/3FXAzV3EHjLHGac/LuLtBmztX/7l+SK4VeTqaRWtJJLClTcNaSg==}
+  hexo-bilibili-bangumi@1.10.7:
+    resolution: {integrity: sha512-w/gzx61lmf8iXy34ByS+Jf5wWqT2GPkNaBfRNSCPt/Lad/lNA54Mh9jzUZGSTHTP6Esrwh75Isqc6bn0YqDa3w==}
 
   hexo-bunyan@1.0.0:
     resolution: {integrity: sha512-RymT8Ck+K77mLt9BEYNb4uyfC7RIQnU5N3laXowMrS28jj2h89VHJCOnhV00mmta4fHRqNa07kP1Hrn17nvMkQ==}
@@ -5836,7 +5836,7 @@ snapshots:
       algoliasearch: 4.20.0
       striptags: 3.2.0
 
-  hexo-bilibili-bangumi@1.10.1:
+  hexo-bilibili-bangumi@1.10.7:
     dependencies:
       '@babel/runtime': 7.24.7
       axios: 1.5.0
