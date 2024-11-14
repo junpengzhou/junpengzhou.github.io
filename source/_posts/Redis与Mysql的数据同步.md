@@ -1,5 +1,6 @@
 ---
 title: Redis与Mysql的数据同步
+cover: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97%E5%A4%8F%E6%97%A5%E4%B9%98%E5%87%89.jpg
 tags: 中间件
 categories: 技术分享
 abbrlink: '4e422229'
