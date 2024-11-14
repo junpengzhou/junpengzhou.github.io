@@ -50,16 +50,16 @@ date: 2024-08-13 11:15:40
 
 # 四、核心组件说明
 
-- **Spring Core**：Spring核心模块，主要提供 ioC 依赖注入、
-- **Spring Context**：向Spring框架提供上下文信息、
-- **Spring AOP**：面向切面编程，为基于 Spring 的应用程序中的对象提供了事务管理服务、
-- **Spring JDBC**：Java数据库连接、
-- **Spring JMS**：Java消息服务、
-- **Spring ORM**：用于支持 MyBatis、Hibernate 等 ORM 工具、
-- **Spring Web**：为创建Web应用程序提供支持、
-- **Spring Test**：提供了对 JUnit 和 TestNG 测试的支持、
-- **Spring Aspects**：该模块为与AspectJ的集成提供支持。
-- **Spring Web**：Spring框架支持与Struts集成，为基于web的应用程序提供了上下文。
+- **Spring Core**：Spring核心模块，主要提供 ioC 依赖注入
+- **Spring Context**：向Spring框架提供上下文信息
+- **Spring AOP**：面向切面编程，为基于 Spring 的应用程序中的对象提供了事务管理服务
+- **Spring JDBC**：Java数据库连接
+- **Spring JMS**：Java消息服务
+- **Spring ORM**：用于支持 MyBatis、Hibernate 等 ORM 工具
+- **Spring Web**：为创建Web应用程序提供支持
+- **Spring Test**：提供了对 JUnit 和 TestNG 测试的支持
+- **Spring Aspects**：该模块为与AspectJ的集成提供支持
+- **Spring Web**：Spring框架支持与Struts集成，为基于web的应用程序提供了上下文
 
 # 五、Spring的优点
 
@@ -108,8 +108,8 @@ Spring 对 JavaEE 开发中非常难用的一些 API（JDBC、JavaMail、远程�
 **IoC容器的初始化过程可以分为三步：**
 
 1. Resource 定位（Bean的定义文件定位）
-2. 将 Resource 定位好的资源载入到 BeanDefinition
-3. 将 BeanDefiniton 注册到容器中
+2. 将 Resource 定位好的资源载入到 BeanDefinition（BeanDefinition 中保存了我们的 Bean 信息，比如这个 Bean 指向的是哪个类、是否是单例的、是否懒加载、这个 Bean 依赖了哪些 Bean 等等）
+3. 将 BeanDefiniton 注册到容器中（BeanFactory）
 
 ![image-20240813144751993](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/image-20240813144751993.png)
 
