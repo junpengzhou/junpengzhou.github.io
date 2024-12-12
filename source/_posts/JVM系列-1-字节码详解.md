@@ -309,9 +309,9 @@ public com.rhythm7.Main();
    flags: ACC_PUBLIC
    Code:
      stack=1, locals=1, args_size=1
-        0: aload_0
-        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
-        4: return
+        0: aload_0 // 这条指令, 前面的0表示字节码的位置索引; 在执行跳转指令的时候, 其操作数引用的就是这种索引值(也可以叫指令偏移量), 在这里 aload_0 指令的作用, 就是将局部变量表中0号槽位的变量值(this)加载到操作数栈(压入), 供后续的其他指令使用。
+        1: invokespecial #1                  // Method java/lang/Object."<init>":()V,是位置索引偏移量=1的指令, 这个指令的助记符是 invokespecial, 在字节码文件中需要附带2个字节的操作数, 也就是后面跟着的 #1 占了2个字节, 表示引用常量池中的1号item。 这条指令包括了操作码和操作数, 表示的意思是: 使用前一条指令压入操作数栈的对象, 调用特殊方法, 也就是Object类的初始化块 <init> 方法。
+        4: return // 表示方法结束并返回; 为什么指令前面的索引值是4呢? 参考前一条指令的说明, 索引位置2和索引位置3, 被 invokespecial 指令的操作数占用了
      LineNumberTable:
        line 3: 0
      LocalVariableTable:
@@ -319,7 +319,7 @@ public com.rhythm7.Main();
            0       5     0  this   Lcom/rhythm7/Main;
 ```
 
-这里是构造方法：Main()，返回值为void, 权限为public方法。
+Code区的编号0～4，就是.java中的方法源代码编译后让JVM真正执行的操作码。为了帮助人们理解，反编译后看到的是十六进制操作码所对应的助记符，十六进制值操作码与助记符的对应关系，以及每一个操作码的用处可以查看Oracle官方文档或https://github.com/cncounter/translation/blob/master/tiemao_2020/42_method_byte_code/README.md进行了解，这里是构造方法：Main()，返回值为void, 权限为public方法。
 
 Code内的主要属性为:
 
@@ -496,6 +496,7 @@ public static final void sayHello(java.lang.Object);
 
 ## 参考文章
 
+- https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html
 - https://www.cnblogs.com/paddix/p/5282004.html
 - https://blog.csdn.net/sinat_37191123/article/details/84582438
 - https://blog.csdn.net/tyyj90/article/details/78472986
