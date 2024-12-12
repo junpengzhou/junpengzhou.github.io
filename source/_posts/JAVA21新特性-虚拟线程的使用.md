@@ -2,9 +2,10 @@
 title: JAVA21新特性-虚拟线程的使用
 cover: >-
   https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97%E6%B0%B4%E4%B8%AD%E7%8E%A9-cover.png
-date: 2024-09-03 14:09:55
 tags: Java
 categories: 技术分享
+abbrlink: 6cdabc61
+date: 2024-09-03 14:09:55
 ---
 
 虚拟线程是 Java 21 引入的一个新特性，用于简化并发编程。它与传统的操作系统线程相比，具有显著的优势：
