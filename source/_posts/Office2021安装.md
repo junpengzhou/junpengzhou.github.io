@@ -3,10 +3,10 @@ title: Office2021安装
 cover: >-
   https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/office-cover.webp
 abbrlink: 82d0f8f4
-date: 2024-08-12 11:23:32
 tags: 软件安装
 categories: 技术分享
-
+date: 2024-08-12 11:23:32
+updated: 2024-08-12 11:23:32
 ---
 
 由于微软在Office 2016之后的版本均不提供ISO镜像下载（指正版商业镜像），VL版本的Office需要管理员手动使用ODT工具进行部署。

@@ -6,6 +6,7 @@ tags: 建站经验
 categories: 技术分享
 abbrlink: d56aa5a7
 date: 2023-08-11 12:20:35
+updated: 2023-08-11 12:20:35
 ---
 ``注意 Vercel 部署的环境需配合 1.4.0 以上版本的 twikoo.js 使用 默认域名 *.vercel.app 在中国大陆访问速度较慢甚至无法访问，绑定自己的域名可以提高访问速度``
 

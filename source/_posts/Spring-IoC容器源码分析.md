@@ -6,6 +6,7 @@ tags: Java
 categories: 技术分享
 abbrlink: fbb9694d
 date: 2024-08-14 11:52:18
+updated: 2024-08-14 11:52:18
 ---
 
 Spring 最重要的概念是 IOC 和 AOP，本篇文章其实就是要带领大家来分析下 Spring 的 IOC 容器。既然大家平时都要用到 Spring，怎么可以不好好了解 Spring 呢？阅读本文并不能让你成为 Spring 专家，不过一定有助于大家理解 Spring 的很多概念，帮助大家排查应用中和 Spring 相关的一些问题。
