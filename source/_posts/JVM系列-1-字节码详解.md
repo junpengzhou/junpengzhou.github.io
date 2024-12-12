@@ -18,8 +18,6 @@ updated: 2024-05-12 14:53:26
 
 ![img](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/java-jvm-class-1.png)
 
-## 字节码结构
-
 ###  字节码的定义
 
 Java之所以可以“一次编译，到处运行”，一是因为JVM针对各种操作系统、平台都进行了定制，二是因为无论在什么平台，都可以编译生成固定格式的字节码（.class文件）供JVM使用。因此，也可以看出字节码对于Java生态的重要性。之所以被称之为字节码，是因为字节码文件由十六进制值组成，而JVM以两个十六进制值为一组，即以字节为单位进行读取。在Java中一般是用javac命令编译源代码为字节码文件，一个.java文件从编译到运行的示例如图所示。
@@ -30,7 +28,7 @@ JVM规范要求每一个字节码文件都要由十部分按照固定的顺序�
 
 ![图3 JVM规定的字节码结构](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/393097261d80d730f434561157e219c657820.png)
 
-### 从一个例子开始
+### 引入案例
 
 下面以一个简单的例子来逐步讲解字节码。
 
@@ -77,13 +75,13 @@ cafe babe 0000 0034 0013 0a00 0400 0f09
 
 按字节为单位进行剖析（8bit为1字节）
 
-第一部分，cafebabe 魔数（Magic Number）
+### 第一部分，cafebabe 魔数（Magic Number）
 
 文件格式，文件类型在JVM中的判断方式是使用魔数来进行判断的，所有的.class文件的前四个字节都是魔数，魔数的固定值为：0xCAFEBABE。魔数放在文件开头，JVM根据文件的开头来判断这个文件是否可能是一个.class文件，如果是，才会继续进行之后的操作。
 
 > 有趣的是，魔数的固定值是Java之父James Gosling制定的，为CafeBabe（咖啡宝贝），而Java的图标为一杯咖啡。
 
-第二部分，版本号（Version）
+### 第二部分，版本号（Version）
 
 版本号为魔数之后的4个字节，前两个字节表示次版本号（Minor Version），后两个字节表示主版本号（Major Version）。示例中版本号为“00 00 00 34”，次版本号转化为十进制为0，主版本号转化为十进制为52，在Oracle官网中查询序号52对应的主版本号为1.8，所以编译该文件的Java版本号为1.8.0。
 
@@ -213,7 +211,9 @@ SourceFile: "Main.java"
 | ACC_ANNOTATION | 0x2000 | 标志这是一个注解                                             |
 | ACC_ENUM       | 0x4000 | 标志这是一个枚举                                             |
 
-**常量池（Constant Pool）**可以理解成Class文件中的资源仓库。主要存放的是两大类常量：字面量(Literal)和符号引用(Symbolic References)。字面量类似于java中的常量概念，如文本字符串，final常量等，而符号引用则属于编译原理方面的概念，包括以下三种:
+### 第三部分，常量池（Constant Pool）
+
+常量池可以理解成Class文件中的资源仓库。主要存放的是两大类常量：字面量(Literal)和符号引用(Symbolic References)。字面量类似于java中的常量概念，如文本字符串，final常量等，而符号引用则属于编译原理方面的概念，包括以下三种:
 
 - 类和接口的全限定名(Fully Qualified Name)
 - 字段的名称和描述符号(Descriptor)
@@ -267,15 +267,15 @@ java/lang/Object."<init>":()V
 
 > 补充说明：对于**数组类型**，**每一维使用一个**前置的`[`字符来描述，如定义一个`java.lang.String[][]`类型的二维数组，将被记录为`[[Ljava/lang/String;`
 
-第四部分，访问标志（Access_Flag），常量池结束之后的两个字节，描述该Class是类还是接口，以及是否被Public、Abstract、Final等修饰符修饰。需要注意的是，JVM并没有穷举所有的访问标志，而是使用按位或操作来进行描述的，比如某个类的修饰符为Public Final，则对应的访问修饰符的值为ACC_PUBLIC | ACC_FINAL，即0x0001 | 0x0010=0x0011，如果使用javap分析则直观化展示了
-
-第五部分，当前类名
+### 第四部分，访问标志（access_flag）
+常量池结束之后的两个字节，描述该Class是类还是接口，以及是否被Public、Abstract、Final等修饰符修饰。需要注意的是，JVM并没有穷举所有的访问标志，而是使用按位或操作来进行描述的，比如某个类的修饰符为Public Final，则对应的访问修饰符的值为ACC_PUBLIC | ACC_FINAL，即0x0001 | 0x0010=0x0011，如果使用javap分析则直观化展示了
+### 第五部分，当前类名(this_class)
 访问标志后的两个字节，描述的是当前类的全限定名。这两个字节保存的值为常量池中的索引值，根据索引值就能在常量池中找到这个类的全限定名，如果使用javap分析则直观化展示了
-第六部分，父类名称
+### 第六部分，父类名称(super_class)
 当前类名后的两个字节，描述父类的全限定名，同上，保存的也是常量池中的索引值，如果使用javap分析则直观化展示了
-第七部分，接口信息
+### 第七部分，接口信息(interfaces)
 父类名称后为两字节的接口计数器，描述了该类或父类实现的接口数量。紧接着的n个字节是所有接口名称的字符串常量的索引值，如果使用javap分析则直观化展示了
-第八部分，字段表
+### 第八部分，字段表(fields)
 字段表用于描述类和接口中声明的变量，包含类级别的变量以及实例变量，但是不包含方法内部声明的局部变量。字段表也分为两部分，第一部分为两个字节，描述字段个数；第二部分是每个字段的详细信息fields_info。字段表结构如下图所示：
 
 ![图10 字段表结构](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/0f795d2b2b28ce96b5963efb2e564e5a197874.png)
@@ -284,14 +284,14 @@ java/lang/Object."<init>":()V
 
 ![图11 字段表示例](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/bd2b14ec23771a8f6a20699d1295dec6129370.png)
 
-第九部分，方法表
+### 第九部分，方法表
 字段表结束后为方法表，方法表也是由两部分组成，第一部分为两个字节描述方法的个数；第二部分为每个方法的详细信息。方法的详细信息较为复杂，包括方法的访问标志、方法名、方法的描述符以及方法的属性，如下图所示：
 
 ![图12 方法表结构](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/d84d5397da84005d9e21d5289afa29e755614.png)
 
 方法的权限修饰符依然可以通过查表得到，方法名和方法的描述符都是常量池中的索引值，可以通过索引值在常量池中找到。而“方法的属性”这一部分较为复杂，直接借助javap -verbose将其反编译为人可以读懂的信息进行解读，可以看到属性中包括以下三个部分：
 
-### 方法表集合
+### 第九部分，方法表集合(methods)
 
 在常量池之后的是对类内部的方法描述，在字节码中以表的集合形式表现，暂且不管字节码文件的16进制文件内容如何，我们直接看反编译后的内容。
 
@@ -350,7 +350,8 @@ public int inc();                             // 方法名
             0       7     0  this   Lcom/rhythm7/Main; // shot = 0， 为this
 ```
 
-第十部分，附加属性表
+### 第十部分，附加属性表(attributes)
+
 字节码的最后一部分，该项存放了在该文件中类或接口所定义属性的基本信息。
 
 通过以上一个最简单的例子，可以大致了解源码被编译成字节码后是什么样子的。 下面利用所学的知识点来分析try-catch-finally
@@ -501,6 +502,7 @@ public static final void sayHello(java.lang.Object);
 - https://blog.csdn.net/sinat_37191123/article/details/84582438
 - https://blog.csdn.net/tyyj90/article/details/78472986
 - https://blog.csdn.net/a15089415104/article/details/83215598
-- 咸鱼不思议 https://juejin.im/post/5aca2c366fb9a028c97a5609
+- https://juejin.im/post/5aca2c366fb9a028c97a5609
 - https://tech.meituan.com/2019/09/05/java-bytecode-enhancement.html
+- https://github.com/cncounter/translation/blob/master/tiemao_2020/42_method_byte_code/README.md
 
