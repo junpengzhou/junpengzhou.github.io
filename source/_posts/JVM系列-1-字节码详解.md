@@ -7,20 +7,18 @@ date: 2024-05-12 14:53:26
 updated: 2024-05-12 14:53:26
 ---
 
-## 多语言编译为字节码在JVM中运行
+## 多语言编译为统一的字节码规范在JVM中运行
 
-计算机是不能直接运行java代码的，必须要先运行java虚拟机，再由java虚拟机运行编译后的java代码。这个编译后的代码，就是本文要介绍的java字节码。
+Java是一种高级编程语言，之所以称之为高级是因为Java语言属于面向人类理解逻辑领域，计算机是无法直接识别并执行，需经由Java虚拟机运行编译后的Java代码。这个编译后的代码，就是本文要介绍的java字节码。
 
-为什么jvm不能直接运行java代码呢，这是因为在cpu层面看来计算机中所有的操作都是一个个指令的运行汇集而成的，java是高级语言，只有人类才能理解其逻辑，计算机是无法识别的，所以java代码必须要先编译成字节码文件，jvm才能正确识别代码转换后的指令并将其运行。
-
-- Java代码间接翻译成字节码，储存字节码的文件再交由运行于不同平台上的JVM虚拟机去读取执行，从而实现一次编写，到处运行的目的。
-- JVM也不再只支持Java，由此衍生出了许多基于JVM的编程语言，如Groovy, Scala, Koltin等等。
+- Java代码通过编译器编译成字节码，储存字节码的文件再交由运行于不同平台上的JVM虚拟机去读取执行，从而实现一次编写，到处运行的目的。
+- 另外JVM也不再只支持Java，由此衍生出了许多基于JVM的编程语言，如Groovy, Scala, Koltin等，它们最终也会编译成字节码，供给JVM进行转换执行。
 
 ![img](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/java-jvm-class-1.png)
 
 ###  字节码的定义
 
-Java之所以可以“一次编译，到处运行”，一是因为JVM针对各种操作系统、平台都进行了定制，二是因为无论在什么平台，都可以编译生成固定格式的字节码（.class文件）供JVM使用。因此，也可以看出字节码对于Java生态的重要性。之所以被称之为字节码，是因为字节码文件由十六进制值组成，而JVM以两个十六进制值为一组，即以字节为单位进行读取。在Java中一般是用javac命令编译源代码为字节码文件，一个.java文件从编译到运行的示例如图所示。
+Java之所以可以“一次编译，到处运行”，一是因为JVM针对各种操作系统、平台都进行了定制，二是因为无论在什么平台，都可以编译生成固定格式的字节码（.class文件）供JVM使用，再有JVM去统一转换成计算机能理解的指令。之所以被称之为字节码，是因为字节码文件由十六进制值组成，而JVM以两个十六进制值为一组，即以字节为单位进行读取。在Java中一般是用`javac`命令编译源代码为字节码文件，一个.java文件从编译到运行的过程如下图所示。
 
 ![图1 Java运行示意图](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/110b593ecf53866e0dec8df3618b0443257977.png)
 
@@ -452,7 +450,7 @@ public final class com.rhythm7.SayHelloKt
  major version: 52
  flags: ACC_PUBLIC, ACC_FINAL, ACC_SUPER
 Constant pool:
-    //省略常量池部分字节码
+    // 此处省略常量池部分字节码
 {
  public static final void sayHello(java.lang.Object);
    descriptor: (Ljava/lang/Object;)V
