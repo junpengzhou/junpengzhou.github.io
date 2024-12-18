@@ -2,7 +2,9 @@
 title: Spring5+的WebClient使用指南
 cover: >-
   https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/spring%E7%87%95%E5%AD%90-cover.webp
-tags: 'Java,Spring'
+tags: 
+    - Java
+    - Spring
 categories: 技术分享
 abbrlink: 35b1d86e
 date: 2024-12-11 14:29:31
