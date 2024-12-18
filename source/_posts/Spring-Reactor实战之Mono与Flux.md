@@ -1,10 +1,12 @@
 ---
 title: Spring Reactor实战之Mono与Flux
+cover: >-
+  https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97-cover.webp
+tags: 'Spring,Java'
+categories: 技术分享
+abbrlink: 34ed37b6
 date: 2024-12-17 15:33:24
 updated: 2024-12-17 15:33:24
-cover:https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97-cover.webp
-tags:Spring,Java
-categories: 技术分享
 ---
 
 ## 前言
