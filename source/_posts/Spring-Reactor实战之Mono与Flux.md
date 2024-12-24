@@ -19,6 +19,8 @@ updated: 2024-12-18 14:26:38
 
 但是随着 `Spring Cloud Gateway` 的火爆，在业务路由网关中应用响应式编程可以帮助我们更好的管理微服务的路由和IO处理，因此响应式编程后端又变成了不可回避， 不得不去学习的技术
 
+官方文档：https://projectreactor.io/docs/core/release/reference/aboutDoc.html
+
 ## 响应式编程概述
 
 ### 背景知识
@@ -31,32 +33,36 @@ updated: 2024-12-18 14:26:38
 
 响应式编程是一种面向数据流和变化传播的编程范式。这意味着可以在编程语言中很方便地表达静态或动态的数据流，而相关的计算模型会自动将变化的值通过数据流进行传播
 
-响应式编程基于reactor（Reactor 是一个运行在 Java8 之上的响应式框架）的思想，当你做一个带有一定延迟的才能够返回的io操作时，不会阻塞，而是立刻返回一个流，并且订阅这个流，当这个流上产生了返回数据，可以立刻得到通知并调用回调函数处理数据
+响应式编程基于Reactor（Reactor 是一个运行在 Java8 之上的响应式框架）的思想，当你做一个带有一定延迟的才能够返回的io操作时，不会阻塞，而是立刻返回一个流，并且订阅这个流，当这个流上产生了返回数据，可以立刻得到通知并调用回调函数处理数据
 
 电子表格程序就是响应式编程的一个例子。单元格可以包含字面值或类似"=B1+C1"的公式，而包含公式的单元格的值会依据其他单元格的值的变化而变化
 
-响应式传播核心特点之一：变化传播：一个单元格变化之后，会像多米诺骨牌一样，导致直接和间接引用它的其他单元格均发生相应变化
+Vue作为一种响应式编程框架，官方提到`Vue.js的响应式原理就是自动追踪数据的变化，从而实现数据驱动视图的更新`
+
+响应式传播核心特点之一：变化传播，一个单元格变化之后，会像多米诺骨牌一样，导致直接和间接引用它的其他单元格均发生相应变化
 
 ### 基于Java8实现观察者模式
 
 Observable类：此类表示可观察对象，或模型视图范例中的“数据”
 
-它可以被子类实现以表示应用程序想要观察的对象
+它可以被子类实现以表示应用程序想要观察的对象，也被称之为“被观察者”或者“主题”（Subject）
 
 ```java
 //想要观察的对象 ObserverDemo
 public class ObserverDemo extends Observable {
     public static void main(String[] args) {
         ObserverDemo observerDemo = new ObserverDemo();
-        //添加观察者
+        // 添加观察者（Observer）
         observerDemo.addObserver((o,arg)->{
             System.out.println("数据发生变化A");
         });
         observerDemo.addObserver((o,arg)->{
             System.out.println("数据发生变化B");
         });
-        observerDemo.setChanged();//将此Observable对象标记为已更改
-        observerDemo.notifyObservers();//如果该对象发生了变化，则通知其所有观察者
+        // 将此Observable对象标记为已更改
+        observerDemo.setChanged();
+        // 如果该对象发生了变化，则通知其所有观察者
+        observerDemo.notifyObservers();
     }
 }
 ```
@@ -81,47 +87,83 @@ Observable<Integer> observable = Observable.create(new Observable.OnSubscribe<In
 来个例子：
 
 ```java
-Observable<Integer> observable = Observable.create(new Observable.OnSubscribe<Integer>() {
-    @Override
-    public void call(Subscriber<? super Integer> subscriber) {
-        for(int i=0;i<5;i++) {
-            subscriber.onNext(i);
-        }
-        subscriber.onCompleted();
-    }
-});
-// Observable.subscribe(Observer)，Observer订阅了Observable
-Subscription subscribe = observable.subscribe(new Observer<Integer>() {
-    @Override
-    public void onCompleted() {
-        Log.e(TAG, "完成");
-    }
+public static void main(String[] args) {
+        // 完整写法
+        // 创建被观察者
+        Observable<String> observable = Observable.create(emitter -> {
+            for (int i = 0; i < 5; i++) {
+                emitter.onNext(i + "");
+            }
+            emitter.onComplete();
+//            throw new RuntimeException("抛出一个错误进行测试");
+        });
+        // 添加第一个观察者
+        observable.subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+                log.info("订阅事件1-观察者1-上线");
+            }
 
-    @Override
-    public void onError(Throwable e) {
-        Log.e(TAG, "异常");
-    }
+            @Override
+            public void onNext(@NonNull String string) {
+                log.info("订阅事件1-观察者1-收到的内容：{}", string);
+            }
 
-    @Override
-    public void onNext(Integer integer) {
-        Log.e(TAG, "接收Obsverable中发射的值：" + integer);
-    }
-});
+            @Override
+            public void onError(@NonNull Throwable e) {
+                log.error("订阅事件1-观察者1-错误", e);
+            }
+
+            @Override
+            public void onComplete() {
+                log.info("订阅事件1-观察者1-结束");
+            }
+        });
+
+        // 添加第二个观察者
+        observable.subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+                log.info("订阅事件1-观察者2-上线");
+            }
+
+            @Override
+            public void onNext(@NonNull String string) {
+                log.info("订阅事件1-观察者2-收到的内容：{}", string);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                log.error("订阅事件1-观察者2-错误", e);
+            }
+
+            @Override
+            public void onComplete() {
+                log.info("订阅事件1-观察者2-结束");
+            }
+        });
 ```
 
 输出：
 
 ```plain
-接收Obsverable中发射的值：0
-接收Obsverable中发射的值：1
-接收Obsverable中发射的值：2
-接收Obsverable中发射的值：3
-接收Obsverable中发射的值：4
+订阅事件1-观察者1-上线
+订阅事件1-观察者1-收到的内容：0
+订阅事件1-观察者1-收到的内容：1
+订阅事件1-观察者1-收到的内容：2
+订阅事件1-观察者1-收到的内容：3
+订阅事件1-观察者1-收到的内容：4
+订阅事件1-观察者1-结束
+订阅事件1-观察者2-上线
+订阅事件1-观察者2-收到的内容：0
+订阅事件1-观察者2-收到的内容：1
+订阅事件1-观察者2-收到的内容：2
+订阅事件1-观察者2-收到的内容：3
+订阅事件1-观察者2-收到的内容：4
+订阅事件1-观察者2-结束
 ```
 
-从上面的例子可以看出，在Observer订阅了Observable后，
-
-Observer作为OnSubscribe中call方法的参数传入，从而调用了Observer的相关方法
+从上面的例子可以看出，在Observer订阅了Observable后，Observer被作为subscribe中方法的参数传入，从而调用了Observer的相关方法
 
 ### 基于 Reactor 实现
 
@@ -130,7 +172,7 @@ Reactor 是一个运行在 Java8 之上满足 Reactice 规范的响应式框架�
 Reactor 有两个核心类： `Flux<T>` 和 `Mono<T>`，这两个类都实现 Publisher 接口。
 
 - Flux 类似 RxJava 的 Observable，它可以触发零到多个事件，并根据实际情况结束处理或触发错误。
-- Mono 最多只触发一个事件，所以可以把 Mono 用于在异步任务完成时发出通知。
+- Mono 类似RxJava的Maybe，最多只触发一个事件，常见的用法是用于在异步任务完成时发出通知。
 
 ![preview](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/2e5d2af3e0c94a1478b3dcff3f45c2be.png)
 
@@ -161,7 +203,7 @@ subscribe()：订阅Flux序列，只有进行订阅后才回触发数据流，�
 ```java
 public class TestReactor {
     public static void main(String[] args) {
-        //just()：创建Flux序列，并声明数据流，
+        // just()：创建Flux序列，并声明数据流，
         Flux<Integer> integerFlux = Flux.just(1, 2, 3, 4);//整形
         //subscribe()：订阅Flux序列，只有进行订阅后才回触发数据流，不订阅就什么都不会发生
         integerFlux.subscribe(System.out::println);
@@ -169,7 +211,7 @@ public class TestReactor {
         Flux<String> stringFlux = Flux.just("hello", "world");//字符串
         stringFlux.subscribe(System.out::println);
         
-        //fromArray(),fromIterable()和fromStream()：可以从一个数组、Iterable 对象或Stream 对象中创建Flux序列
+        // fromArray(),fromIterable()和fromStream()：可以从一个数组、Iterable 对象或Stream 对象中创建Flux序列
         Integer[] array = {1,2,3,4};
         Flux.fromArray(array).subscribe(System.out::println);
         
@@ -239,8 +281,6 @@ Flux 是一个发出(emit)`0-N`个元素组成的异步序列的Publisher,可以
 
 以上的的讲解对于初次接触反应式编程的依然是难以理解的，所以这里有一个循序渐进的理解过程。
 
-> **有些类比并不是很妥当，但是对于你循序渐进的理解这些新概念还是有帮助的。**
-
 ### 传统数据处理
 
 我们在平常是这么写的：
@@ -277,6 +317,8 @@ public Flux<ClientUser> allUsers(){
 ```
 
 这时候食客来了，发生了订阅，厨师才开始做。
+
+官方文档：https://easywheelsoft.github.io/reactor-core-zh/index.html#flux
 
 ### Flux 的创建Demo
 
@@ -343,8 +385,6 @@ m.subscribe(i -> System.out.println(i));
 ### Flux和Mono总结
 
 Flux和Mono是**Java**反应式中的重要概念，但是很多同学包括我在开始都难以理解它们。这其实是规定了两种流式范式，这种范式让数据具有一些新的特性，比如基于发布订阅的事件驱动，异步流、背压等等。另外数据是推送（**Push**）给消费者的以区别于平时我们的拉（**Pull**）模式。同时我们可以像[Stream Api](https://links.jianshu.com/go?to=https%3A%2F%2Ffelord.cn%2Fjava8streamapi.html)一样使用类似`map`、`flatmap`等操作符（**operator**）来操作它们。
-
-> 说明：本文会以pdf格式持续更新，更多最新尼恩3高pdf笔记，请从下面的链接获取：[语雀](https://www.yuque.com/crazymakercircle/gkkw8s/khigna) 或者 [码云](https://gitee.com/crazymaker/SimpleCrayIM/blob/master/疯狂创客圈总目录.md)
 
 ## 函数编程
 
@@ -473,8 +513,6 @@ BinaryOperator binaryOperator1=product::reduceStock;
 System.out.println(" 剩余库存(BinaryOperator)：" +binaryOperator1.apply(product.getStock(),10));
 ```
 
-> 说明：本文会以pdf格式持续更新，更多最新尼恩3高pdf笔记，请从下面的链接获取：[语雀](https://www.yuque.com/crazymakercircle/gkkw8s/khigna) 或者 [码云](https://gitee.com/crazymaker/SimpleCrayIM/blob/master/疯狂创客圈总目录.md)
-
 ## Flux类中的静态方法：
 
 ### 简单的创建方法
@@ -510,6 +548,8 @@ System.out.println(" 剩余库存(BinaryOperator)：" +binaryOperator1.apply(pro
 **intervalMillis(long period)和intervalMillis(long delay, long period)：**
 
 与interval()方法相同，但该方法通过毫秒数来指定时间间隔和延迟时间
+
+![img](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/intervalWithDelay.svg)
 
 例子
 
@@ -548,14 +588,14 @@ Flux.generate(sink -> {
   sink.complete();  
 }).subscribe(System.out::println);
 
-
 final Random random = new Random();
 Flux.generate(ArrayList::new, (list, sink) -> {
   int value = random.nextInt(100);
   list.add(value);
   sink.next(value);
-  if( list.size() ==10 )
-    sink.complete();
+  if(list.size() ==10) {
+     sink.complete();  
+  }
   return list;
 }).subscribe(System.out::println);
 ```
@@ -568,9 +608,10 @@ FluxSink支持同步和异步的消息产生，并且可以在一次调用中产
 
 ```scss
 Flux.create(sink -> {
-  for(int i = 0; i < 10; i ++)
-    sink.next(i);
-  sink.complete();
+    for (int i = 0; i < 10; i ++) {
+       sink.next(i);
+    }
+  	sink.complete();
 }).subscribe(System.out::println);
 ```
 
@@ -591,9 +632,9 @@ Mono.justOrEmpty(Optional.of("Hello")).subscribe(System.out::println);
 Mono.create(sink -> sink.success("Hello")).subscribte(System.out::println);
 ```
 
-> 说明：本文会以pdf格式持续更新，更多最新尼恩3高pdf笔记，请从下面的链接获取：[语雀](https://www.yuque.com/crazymakercircle/gkkw8s/khigna) 或者 [码云](https://gitee.com/crazymaker/SimpleCrayIM/blob/master/疯狂创客圈总目录.md)
-
 ## 操作符
+
+建议配合图解观看比较容易理解：https://projectreactor.io/docs/core/release/api/
 
 ### 操作符buffer和bufferTimeout
 
@@ -645,7 +686,7 @@ take系列操作符用来从当前流中提取元素。提取方式如下：
 
 - takeWhile(Predicate<? super T> continuePredicate)：当Predicate返回true时才进行提取
 
-- takeUntilOther(Publisher<?> other)：提取元素知道另外一个流开始产生元素
+- takeUntilOther(Publisher<?> other)：提取元素直到另外一个流开始产生元素
 
 
 ```scss
@@ -657,16 +698,16 @@ Flux.range(1, 1000).takeUntil(i -> i == 10).subscribe(System.out::println);
 
 ### 操作符reduce和reduceWith
 
-reduce和reduceWith操作符对流中包含的所有元素进行累计操作，得到一个包含计算结果的Mono序列。累计操作是通过一个BiFunction来表示的。在操作时可以指定一个初始值。若没有初始值，则序列的第一个元素作为初始值。
+reduce和reduceWith操作符对流中包含的所有元素进行运算操作，得到一个包含计算结果的Mono序列。运算操作是通过一个BiFunction来表示的，标识前后两个相邻元素。reduceWith需要在操作时可以指定一个初始值。
 
 ```scss
 Flux.range(1, 100).reduce((x, y) -> x + y).subscribe(System.out::println);
-Flux.range(1, 100).reduceWith(() -> 100, (x + y) -> x + y).subscribe(System.out::println);
+Flux.range(1, 100).reduceWith(() -> 100, (x, y) -> x + y).subscribe(System.out::println);
 ```
 
 ### 操作符merge和mergeSequential
 
-merge和mergeSequential操作符用来把多个流合并成一个Flux序列。merge按照所有流中元素的实际产生序列来合并，而mergeSequential按照所有流被订阅的顺序，以流为单位进行合并。
+merge和mergeSequential操作符用来把多个流合并成一个Flux序列。merge按照所有流中元素的实际产生序列来合并，而mergeSequential按照所有流被订阅的顺序（串行），以流为单位进行合并。
 
 ```scss
 Flux.merge(Flux.intervalMillis(0, 100).take(5), Flux.intervalMillis(50, 100).take(5)).toStream().forEach(System.out::println);
@@ -675,15 +716,19 @@ Flux.mergeSequential(Flux.intervalMillis(0, 100).take(5), Flux.intervalMillis(50
 
 ### 操作符flatMap和flatMapSequential
 
-flatMap和flatMapSequential操作符把流中的每个元素转换成一个流，再把所有流中的元素进行合并。flatMapSequential和flatMap之间的区别与mergeSequential和merge是一样的。
+flatMap和flatMapSequential操作符把流中的每个元素通过BiFunction指定转换成一个流，再把所有流中的元素进行合并merge。flatMap并发的订阅了它的内部发布者，flatMapSequential和flatMap之间的区别与mergeSequential和merge是一样的。
 
 ```scss
 Flux.just(5, 10).flatMap(x -> Flux.intervalMillis(x * 10, 100).take(x)).toStream().forEach(System.out::println);
 ```
 
+![img](https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/flatMapSequential.svg)
+
 ### 操作符concatMap
 
 concatMap操作符的作用也是把流中的每个元素转换成一个流，再把所有流进行合并。concatMap会根据原始流中的元素顺序依次把转换之后的流进行合并，并且concatMap堆转换之后的流的订阅是动态进行的，而flatMapSequential在合并之前就已经订阅了所有的流。
+
+![img](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/concatMap.svg)
 
 ```scss
 Flux.just(5, 10).concatMap(x -> Flux.intervalMillis(x * 10, 100).take(x)).toStream().forEach(System.out::println);
@@ -730,10 +775,8 @@ Flux.just(1, 2).concatWith(Mono.error(new IllegalArgumentException())).onErrorRe
 当出现错误时还可以使用retry操作符来进行重试。重试的动作是通过重新订阅序列来实现的。在使用retry操作时还可以指定重试的次数。
 
 ```scss
- Flux.just(1, 2).concatWith(Mono.error(new IllegalStateException())).retry(1).subscrible(System.out::println);
+Flux.just(1, 2).concatWith(Mono.error(new IllegalStateException())).retry(1).subscrible(System.out::println);
 ```
-
-> 说明：本文会以pdf格式持续更新，更多最新尼恩3高pdf笔记，请从下面的链接获取：[语雀](https://www.yuque.com/crazymakercircle/gkkw8s/khigna) 或者 [码云](https://gitee.com/crazymaker/SimpleCrayIM/blob/master/疯狂创客圈总目录.md)
 
 ## 调度器Scheduler
 
@@ -831,8 +874,6 @@ source.subscribe();
 Thread.sleep(5000);
 source.toStream().forEach(System.out::println);
 ```
-
-> 说明：本文会以pdf格式持续更新，更多最新尼恩3高pdf笔记，请从下面的链接获取：[语雀](https://www.yuque.com/crazymakercircle/gkkw8s/khigna) 或者 [码云](https://gitee.com/crazymaker/SimpleCrayIM/blob/master/疯狂创客圈总目录.md)
 
 ## ServerWebExchange交换机
 
