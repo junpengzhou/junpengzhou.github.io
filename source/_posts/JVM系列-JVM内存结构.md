@@ -2,7 +2,9 @@
 title: JVM系列-JVM内存结构
 abbrlink: 135490ad
 cover: https://junpengzhou-1305658609.cos.ap-nanjing.myqcloud.com/blog/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84-cover.webp
-tags: JVM
+tags:
+    - Java
+    - JVM
 categories: 技术分享
 date: 2024-12-06 16:58:18
 updated: 2024-12-26 17:06:46
