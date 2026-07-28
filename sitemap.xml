@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://www.junpengzhou.top/privacy/index.html</loc>
-    
-    <lastmod>2026-07-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.junpengzhou.top/about/index.html</loc>
     
     <lastmod>2026-07-28</lastmod>
@@ -84,6 +75,15 @@
   
   <url>
     <loc>https://www.junpengzhou.top/link/index.html</loc>
+    
+    <lastmod>2026-07-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.junpengzhou.top/privacy/index.html</loc>
     
     <lastmod>2026-07-28</lastmod>
     
@@ -454,6 +454,13 @@
   </url>
   
   <url>
+    <loc>https://www.junpengzhou.top/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.junpengzhou.top/tags/%E6%BA%90%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -469,13 +476,6 @@
   
   <url>
     <loc>https://www.junpengzhou.top/tags/%E6%97%A5%E5%B8%B8%E8%A7%81%E9%97%BB/</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.junpengzhou.top/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
